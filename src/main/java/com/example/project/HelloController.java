@@ -2,11 +2,12 @@ package com.example.project;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXTextField;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.control.TextField;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -17,13 +18,13 @@ public class HelloController implements Initializable {
     private Hyperlink forget;
 
     @FXML
-    private JFXButton login;
+    private Button login;
 
     @FXML
-    private JFXTextField pass;
+    private TextField pass;
 
     @FXML
-    private JFXTextField user;
+    private TextField user;
 
 
 
