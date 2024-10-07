@@ -4,8 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXTextField;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.layout.AnchorPane;
@@ -27,15 +26,6 @@ public void gotomenu() throws IOException{
     }
     @FXML
     private Hyperlink forget;
-
-    @FXML
-    private JFXButton login;
-
-    @FXML
-    private JFXTextField pass;
-
-    @FXML
-    private JFXTextField user;
 
 
 
