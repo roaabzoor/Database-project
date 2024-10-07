@@ -37,7 +37,7 @@
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </Label>
-            <JFXButton layoutX="429.0" layoutY="315.0" prefHeight="52.0" prefWidth="161.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Submit" textFill="WHITE">
+            <JFXButton layoutX="429.0" layoutY="315.0" onAction="#gotonewpass" prefHeight="52.0" prefWidth="161.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Submit" textFill="WHITE">
                <font>
                   <Font name="Times New Roman Bold" size="25.0" />
                </font>

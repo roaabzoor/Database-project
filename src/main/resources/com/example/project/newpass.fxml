@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Newpass">
+   <children>
+      <Pane prefHeight="450.0" prefWidth="700.0" styleClass="forget" stylesheets="@css/project.css">
+         <children>
+            <ImageView fitHeight="450.0" fitWidth="373.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/newp.jpg" />
+               </image>
+            </ImageView>
+            <Line endX="-65.56765747070312" endY="224.4000244140625" layoutX="435.0" layoutY="226.0" startX="-65.56765747070312" startY="-226.0" />
+            <ImageView fitHeight="65.0" fitWidth="71.0" layoutX="497.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/relock.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="416.0" layoutY="161.0" prefHeight="49.0" prefWidth="237.0" text="Reset Your Password" textFill="#391c00">
+               <font>
+                  <Font name="Times New Roman Bold" size="24.0" />
+               </font>
+            </Label>
+            <Pane layoutX="397.0" layoutY="210.0" prefHeight="40.0" prefWidth="273.0" styleClass="text1" stylesheets="@css/project.css">
+               <children>
+                  <JFXPasswordField layoutX="40.0" layoutY="8.0" prefHeight="25.0" prefWidth="228.0" promptText="Password" />
+                  <ImageView fitHeight="31.0" fitWidth="41.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/padlock.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <JFXButton layoutX="434.0" layoutY="276.0" prefHeight="31.0" prefWidth="200.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Reset" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="34.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="backk" fitHeight="40.0" fitWidth="47.0" layoutX="647.0" layoutY="7.0" onMouseClicked="#gotologin" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/back-button.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

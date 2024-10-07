@@ -6,16 +6,11 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class Code {
+public class Newpass {
     @FXML
-    public AnchorPane code;
-
+    public AnchorPane newpaas ;
     public void gotologin() throws IOException {
         AnchorPane root = FXMLLoader.load(getClass().getResource("login.fxml"));
-        code.getChildren().setAll(root);
-    }
-    public void gotonewpass() throws IOException {
-        AnchorPane root = FXMLLoader.load(getClass().getResource("newpass.fxml"));
-        code.getChildren().setAll(root);
+        newpaas.getChildren().setAll(root);
     }
 }
