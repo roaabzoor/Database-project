@@ -12,8 +12,7 @@ import java.util.ResourceBundle;
 public class Forget implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        HelloApplication.s.setWidth(460);
-        HelloApplication.s.setHeight(380);
+
     }
 
     @FXML

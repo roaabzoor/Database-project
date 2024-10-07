@@ -9,49 +9,45 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="forget" prefHeight="350.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Forget">
+<AnchorPane fx:id="forget" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Forget">
    <children>
-      <Pane layoutX="-2.0" prefHeight="351.0" prefWidth="206.0">
+      <Pane layoutY="-3.0" prefHeight="458.0" prefWidth="700.0" styleClass="forget" stylesheets="@css/project.css">
          <children>
-            <ImageView fitHeight="352.0" fitWidth="205.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="471.0" fitWidth="267.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@image/9d0e8a4e966b0355bc788c56711b6ce0.jpg" />
                </image>
             </ImageView>
-            <ImageView fx:id="back" fitHeight="31.0" fitWidth="34.0" layoutX="7.0" layoutY="8.0" onMouseClicked="#gotologin" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@image/back-button.png" />
-               </image>
-            </ImageView>
-         </children>
-      </Pane>
-      <Pane layoutX="204.0" prefHeight="352.0" prefWidth="247.0" styleClass="forget" stylesheets="@css/project.css">
-         <children>
-            <Label layoutX="35.0" layoutY="46.0" prefHeight="50.0" prefWidth="206.0" text="Forget Your Password?" textFill="#391c00">
+            <Label layoutX="357.0" layoutY="96.0" prefHeight="52.0" prefWidth="309.0" text="Forget Your Password?" textFill="#391c00">
                <font>
-                  <Font name="Times New Roman Bold" size="18.0" />
+                  <Font name="Times New Roman Bold" size="20.0" />
                </font>
             </Label>
-            <JFXTextField focusColor="WHITE" layoutX="17.0" layoutY="194.0" prefHeight="31.0" prefWidth="213.0" promptText="Your Email" />
-            <JFXButton layoutX="35.0" layoutY="247.0" onAction="#gotologin2" prefHeight="44.0" prefWidth="174.0" styleClass="text1" stylesheets="@css/project.css" text="Submit" textFill="#391c00">
-               <font>
-                  <Font name="Times New Roman Bold" size="24.0" />
-               </font>
-            </JFXButton>
-            <Pane layoutX="22.0" layoutY="96.0" prefHeight="74.0" prefWidth="213.0" styleClass="lable" stylesheets="@css/project.css">
+            <Pane layoutX="336.0" layoutY="148.0" prefHeight="86.0" prefWidth="258.0" styleClass="lable" stylesheets="@css/project.css">
                <children>
-                  <Label layoutX="2.0" layoutY="6.0" prefHeight="31.0" prefWidth="229.0" text=" Enter Your Registered Email  Below    " textFill="#391c00">
+                  <Label layoutX="6.0" layoutY="14.0" prefHeight="35.0" prefWidth="246.0" text="Enter Your Registered Email  Below" textFill="#391c00">
                      <font>
-                        <Font name="Times New Roman Bold" size="13.0" />
+                        <Font name="Times New Roman Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutY="37.0" prefHeight="25.0" prefWidth="182.0" text=" To Receive Verfication code :" textFill="#391c00">
+                  <Label layoutX="6.0" layoutY="43.0" prefHeight="35.0" prefWidth="227.0" text="To Receive Verfication code :" textFill="#391c00">
                      <font>
-                        <Font name="Times New Roman Bold" size="14.0" />
+                        <Font name="Times New Roman Bold" size="15.0" />
                      </font>
                   </Label>
                </children>
             </Pane>
+            <JFXButton fx:id="" layoutX="342.0" layoutY="308.0"  prefHeight="59.0" prefWidth="246.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Submit" textFill="#b0b0b0">
+               <font>
+                  <Font name="Times New Roman Bold" size="25.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField layoutX="342.0" layoutY="248.0" prefHeight="35.0" prefWidth="267.0" promptText="Your Email" />
+            <ImageView fitHeight="43.0" fitWidth="49.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/back-button.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
    </children>
