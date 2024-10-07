@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+    public static Stage s;
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login.fxml"));
@@ -15,6 +16,7 @@ public class HelloApplication extends Application {
         stage.setTitle("Pet House");
         stage.setScene(scene);
         stage.show();
+        s=stage;
     }
 
     public static void main(String[] args) {
