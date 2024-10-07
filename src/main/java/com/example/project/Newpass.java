@@ -8,9 +8,9 @@ import java.io.IOException;
 
 public class Newpass {
     @FXML
-    public AnchorPane newpaas ;
+    public AnchorPane newpass;
     public void gotologin() throws IOException {
         AnchorPane root = FXMLLoader.load(getClass().getResource("login.fxml"));
-        newpaas.getChildren().setAll(root);
+        newpass.getChildren().setAll(root);
     }
 }

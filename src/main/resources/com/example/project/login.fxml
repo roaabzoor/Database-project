@@ -38,7 +38,7 @@
                         <Font name="Times New Roman Bold" size="20.0" />
                      </font>
                   </JFXButton>
-                  <Hyperlink fx:id="forget" layoutX="56.0" layoutY="319.0" onAction="#gotoforget" text="forget your password?" textFill="WHITE">
+                  <Hyperlink fx:id="forget" layoutX="46.0" layoutY="319.0" onAction="#gotoforget" text="forget your password?" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
