@@ -13,4 +13,8 @@ public class Code {
         AnchorPane root = FXMLLoader.load(getClass().getResource("login.fxml"));
         code.getChildren().setAll(root);
     }
+    public void gotologin() throws IOException {
+        AnchorPane root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        code.getChildren().setAll(root);
+    }
 }

@@ -33,7 +33,7 @@
                         <Font name="Times New Roman Bold" size="35.0" />
                      </font>
                   </Label>
-                  <JFXButton fx:id="login" layoutX="46.0" layoutY="221.0" onAction="#gotomenu" prefHeight="36.0" prefWidth="148.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Login" textFill="WHITE">
+                  <JFXButton fx:id="login" layoutX="46.0" layoutY="221.0" prefHeight="36.0" prefWidth="148.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Login" textFill="WHITE">
                      <font>
                         <Font name="Times New Roman Bold" size="20.0" />
                      </font>

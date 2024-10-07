@@ -1,15 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="code" prefHeight="350.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Code">
    <children>
-      <Pane layoutX="-1.0" layoutY="-1.0" prefHeight="350.0" prefWidth="450.0">
+      <Pane layoutX="-1.0" layoutY="-1.0" prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: #d6ccbc;">
          <children>
-            <Button layoutX="199.0" layoutY="150.0" mnemonicParsing="false"  text="Button" />
+            <ImageView fitHeight="475.0" fitWidth="349.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/cc65fb41ee3a56ae34328c0bee4b2cfc.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="87.0" layoutX="480.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/forward.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="402.0" layoutY="214.0" prefHeight="81.0" prefWidth="216.0" styleClass="lable" stylesheets="@css/project.css">
+               <children>
+                  <JFXTextField layoutX="11.0" layoutY="15.0" prefHeight="52.0" prefWidth="42.0" unFocusColor="WHITE" />
+                  <JFXTextField layoutX="66.0" layoutY="15.0" prefHeight="52.0" prefWidth="42.0" unFocusColor="WHITE" />
+                  <JFXTextField layoutX="116.0" layoutY="15.0" prefHeight="52.0" prefWidth="42.0" unFocusColor="WHITE" />
+                  <JFXTextField layoutX="167.0" layoutY="15.0" prefHeight="52.0" prefWidth="42.0" unFocusColor="WHITE" />
+               </children>
+            </Pane>
+            <Label layoutX="416.0" layoutY="175.0" prefHeight="32.0" prefWidth="237.0" text="Your Verification Code :" textFill="#361900">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="429.0" layoutY="315.0" prefHeight="52.0" prefWidth="161.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Submit" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="25.0" />
+               </font>
+            </JFXButton>
+            <Line endX="-13.600006103515625" endY="301.39996337890625" layoutX="372.0" layoutY="149.0" startX="-13.600006103515625" startY="-149.0" />
+            <Line endX="0.800018310546875" endY="322.3999938964844" layoutX="368.0" layoutY="128.0" startX="0.800018310546875" startY="-126.9000015258789" />
+            <ImageView fx:id="back1" fitHeight="32.0" fitWidth="42.0" layoutX="653.0" layoutY="14.0" onMouseClicked="#gotologin" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/back-button.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
    </children>

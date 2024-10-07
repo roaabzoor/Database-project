@@ -37,13 +37,13 @@
                   </Label>
                </children>
             </Pane>
-            <JFXButton fx:id="" layoutX="342.0" layoutY="308.0"  prefHeight="59.0" prefWidth="246.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Submit" textFill="#b0b0b0">
+            <JFXButton fx:id="send" layoutX="368.0" layoutY="308.0" onAction="#gotologin2" prefHeight="52.0" prefWidth="220.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Send" textFill="#b0b0b0">
                <font>
                   <Font name="Times New Roman Bold" size="25.0" />
                </font>
             </JFXButton>
             <JFXTextField layoutX="342.0" layoutY="248.0" prefHeight="35.0" prefWidth="267.0" promptText="Your Email" />
-            <ImageView fitHeight="43.0" fitWidth="49.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="back" fitHeight="43.0" fitWidth="49.0" layoutX="6.0" layoutY="7.0" onMouseClicked="#gotologin" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@image/back-button.png" />
                </image>
