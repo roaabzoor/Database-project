@@ -23,16 +23,13 @@ public class Menu implements Initializable {
     @FXML
     public AnchorPane menu;
     public void goToLogin() throws IOException {
-        AnchorPane root= FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        AnchorPane root= FXMLLoader.load(getClass().getResource("login.fxml"));
         menu.getChildren().setAll(root);
     }
-    @FXML
-    public AnchorPane pet;
-    public void goToLogin1() throws IOException {
-        AnchorPane root= FXMLLoader.load(getClass().getResource("menu.fxml"));
-        pet.getChildren().setAll(root);
+    public void gotoaddadpter() throws IOException{
+        AnchorPane root = FXMLLoader.load(getClass().getResource("addAdopter.fxml"));
+        menu.getChildren().setAll(root);
     }
-
     public MediaView mv=new MediaView();
     public Button btnOpen;
     MediaPlayer mediaPlayer;

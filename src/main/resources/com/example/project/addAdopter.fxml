@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="adopter" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.AddAdopter">
+   <children>
+      <Pane layoutY="3.0" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css">
+         <children>
+            <Label layoutX="103.0" layoutY="14.0" prefHeight="52.0" prefWidth="225.0" text="Pet House .">
+               <font>
+                  <Font name="Times New Roman Bold" size="24.0" />
+               </font>
+            </Label>
+            <Line endX="586.0000610351562" endY="-7.62939453125E-6" layoutX="114.0" layoutY="67.0" startX="-114.99999237060547" startY="-7.62939453125E-6" />
+            <ImageView fitHeight="32.0" fitWidth="39.0" layoutX="5.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/back-button.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="280.0" fitWidth="234.0" layoutX="79.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/addado.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="342.0" fitWidth="250.0" layoutX="406.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/editadopt.jpg" />
+               </image>
+            </ImageView>
+            <Line endX="165.10003662109375" endY="61.399993896484375" layoutX="195.0" layoutY="389.0" startX="165.10003662109375" startY="-321.5" />
+            <JFXButton layoutX="84.0" layoutY="372.0" prefHeight="32.0" prefWidth="225.0" styleClass="lable" stylesheets="@css/project.css" text="Open a new adopter file" textFill="#391c00">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="406.0" layoutY="372.0" prefHeight="33.0" prefWidth="250.0" styleClass="lable" stylesheets="@css/project.css" text="Edit &amp; view an adopter's file" textFill="#391c00">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
