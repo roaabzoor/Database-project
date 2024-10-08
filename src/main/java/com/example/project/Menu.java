@@ -39,13 +39,17 @@ public class Menu implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+        String resourcePath = "/com/example/project/vid/the final video.mp4";
 
-         String vu = "C:\\Users\\hp\\IdeaProjects\\Database-projectt\\src\\main\\resources\\com\\example\\project\\vid\\the final video.mp4";
-         Media media = new Media(new File(vu).toURI().toString());
-         mediaPlayer = new MediaPlayer(media);
+        URL resourceUrl = getClass().getResource(resourcePath);
 
 
-         mv.setMediaPlayer(mediaPlayer);
+            // Convert the resource URL to a string and create the Media object
+            Media media = new Media(resourceUrl.toExternalForm());
+            mediaPlayer = new MediaPlayer(media);
+
+            // Set the media player to the media view
+            mv.setMediaPlayer(mediaPlayer);
 
     }
     public void openButton() {

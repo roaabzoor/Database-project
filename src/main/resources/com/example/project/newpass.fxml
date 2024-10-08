@@ -10,8 +10,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Newpass">
+<AnchorPane fx:id="newpass" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Newpass">
    <children>
       <Pane prefHeight="450.0" prefWidth="700.0" styleClass="forget" stylesheets="@css/project.css">
          <children>
