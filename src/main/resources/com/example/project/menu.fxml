@@ -30,7 +30,7 @@
                         <Font name="Times New Roman Bold" size="17.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER" lineSpacing="40.0" mnemonicParsing="false" onAction="#addEmpPage" prefHeight="30.0" prefWidth="177.0" styleClass="home" text="Employee" textFill="LINEN">
+                  <Button alignment="CENTER" lineSpacing="40.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="177.0" styleClass="home" text="Employee" textFill="LINEN">
                      <font>
                         <Font name="Times New Roman Bold" size="17.0" />
                      </font>
