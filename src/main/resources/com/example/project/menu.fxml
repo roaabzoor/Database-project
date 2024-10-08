@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -13,8 +14,14 @@
    <children>
       <Pane layoutX="7.0" layoutY="5.0" prefHeight="440.0" prefWidth="210.0" styleClass="menu" stylesheets="@css/project.css">
          <children>
-            <ImageView fitHeight="53.0" fitWidth="67.0" layoutX="14.0" layoutY="7.0" />
-            <ImageView fitHeight="32.0" fitWidth="177.0" layoutX="35.0" layoutY="28.0" />
+            <ImageView fitHeight="53.0" fitWidth="67.0" layoutX="14.0" layoutY="7.0">
+               <image>
+                  <Image url="@image/house.png" />
+               </image></ImageView>
+            <ImageView fitHeight="32.0" fitWidth="177.0" layoutX="40.0" layoutY="18.0">
+               <image>
+                  <Image url="@image/pethouse.png" />
+               </image></ImageView>
             <Line endX="100.0" layoutX="106.0" layoutY="69.0" startX="-100.0" stroke="#391c00" />
             <VBox alignment="TOP_CENTER" layoutX="6.0" layoutY="81.0" prefHeight="390.0" prefWidth="201.0" spacing="20.0">
                <children>
@@ -23,7 +30,7 @@
                         <Font name="Times New Roman Bold" size="17.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER" lineSpacing="40.0" mnemonicParsing="false" onAction="#goToLogin" prefHeight="30.0" prefWidth="177.0" styleClass="home" text="Employee" textFill="LINEN">
+                  <Button alignment="CENTER" lineSpacing="40.0" mnemonicParsing="false" onAction="#addEmpPage" prefHeight="30.0" prefWidth="177.0" styleClass="home" text="Employee" textFill="LINEN">
                      <font>
                         <Font name="Times New Roman Bold" size="17.0" />
                      </font>
@@ -33,7 +40,7 @@
                         <Font name="Times New Roman Bold" size="17.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER" lineSpacing="40.0" mnemonicParsing="false" onAction="#goToLogin1" prefHeight="30.0" prefWidth="177.0" styleClass="home" text="Pets" textFill="LINEN">
+                  <Button alignment="CENTER" lineSpacing="40.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="177.0" styleClass="home" text="Pets" textFill="LINEN">
                      <font>
                         <Font name="Times New Roman Bold" size="17.0" />
                      </font>
@@ -57,7 +64,7 @@
             </VBox>
          </children>
       </Pane>
-      <MediaView fx:id="mv" fitHeight="300.0" fitWidth="400.0" layoutX="255.0" layoutY="95.0" />
+      <MediaView fx:id="mv" fitHeight="300.0" fitWidth="300.0" layoutX="350.0" layoutY="93.0" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="93.0" />
       <Button fx:id="ptn_open" layoutX="297.0" layoutY="36.0" mnemonicParsing="false" onAction="#openButton" prefHeight="25.0" prefWidth="303.0" styleClass="home" stylesheets="@css/project.css" text=" Click to see our Pet House ! " textFill="#fff9f9">
          <font>
             <Font name="Times New Roman Bold" size="20.0" />

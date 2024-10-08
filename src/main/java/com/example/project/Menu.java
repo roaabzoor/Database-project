@@ -23,14 +23,14 @@ public class Menu implements Initializable {
     @FXML
     public AnchorPane menu;
     public void goToLogin() throws IOException {
-        AnchorPane root= FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        AnchorPane root= FXMLLoader.load(getClass().getResource("login.fxml"));
         menu.getChildren().setAll(root);
     }
     @FXML
-    public AnchorPane pet;
-    public void goToLogin1() throws IOException {
-        AnchorPane root= FXMLLoader.load(getClass().getResource("menu.fxml"));
-        pet.getChildren().setAll(root);
+    public AnchorPane employee;
+    public void addEmpPage() throws IOException {
+        AnchorPane root= FXMLLoader.load(getClass().getResource("add_employee.fxml"));
+        menu.getChildren().setAll(root);
     }
 
     public MediaView mv=new MediaView();
@@ -47,7 +47,8 @@ public class Menu implements Initializable {
             // Convert the resource URL to a string and create the Media object
             Media media = new Media(resourceUrl.toExternalForm());
             mediaPlayer = new MediaPlayer(media);
-
+        mv.prefHeight(800);
+        mv.prefWidth(800);
             // Set the media player to the media view
             mv.setMediaPlayer(mediaPlayer);
 
