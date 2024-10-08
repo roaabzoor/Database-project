@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addemployee" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.AddEmployee">
+   <children>
+      <VBox layoutY="-2.0" prefHeight="450.0" prefWidth="244.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="244.0">
+               <image>
+                  <Image url="@image/e.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="244.0">
+               <image>
+                  <Image url="@image/em.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="244.0">
+               <image>
+                  <Image url="@image/employee2.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <Label layoutX="373.0" layoutY="14.0" prefHeight="37.0" prefWidth="244.0" text=" Employees" textAlignment="CENTER" textFill="#321901">
+         <font>
+            <Font name="Dutch 801 Extra Bold BT" size="37.0" />
+         </font>
+      </Label>
+      <Line endX="-106.0" endY="343.0" layoutX="350.0" layoutY="105.0" startX="-106.0" startY="-105.0" stroke="#1b0d00" />
+      <TableView layoutX="275.0" layoutY="183.0" prefHeight="255.0" prefWidth="397.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Line endX="100.0" layoutX="473.0" layoutY="52.0" startX="-100.0" stroke="#653101" />
+      <ImageView fitHeight="47.0" fitWidth="62.0" layoutX="638.0" layoutY="6.0">
+         <image>
+            <Image url="@image/house.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="298.0" layoutY="71.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="134.0" styleClass="home" text="Add Employee" textFill="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="531.0" layoutY="71.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="134.0" styleClass="home" text="Delete Employee" textFill="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="298.0" layoutY="140.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="134.0" styleClass="home" text="Search Employee" textFill="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="531.0" layoutY="140.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="134.0" styleClass="home" text="Edit Employee" textFill="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="412.0" layoutY="105.0" mnemonicParsing="false" onAction="#goToLogin1" prefHeight="28.0" prefWidth="134.0" styleClass="home" text="Menu" textFill="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
