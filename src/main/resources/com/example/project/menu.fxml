@@ -50,12 +50,12 @@
                         <Font name="Times New Roman Bold" size="17.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER" lineSpacing="40.0" mnemonicParsing="false" onAction="#goToLogin" prefHeight="30.0" prefWidth="177.0" styleClass="home" text="Medical Records" textFill="LINEN">
+                  <Button alignment="CENTER" lineSpacing="40.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="177.0" styleClass="home" text="Medical Records" textFill="LINEN">
                      <font>
                         <Font name="Times New Roman Bold" size="17.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER" layoutX="22.0" layoutY="220.0" lineSpacing="40.0" mnemonicParsing="false" onAction="#goToLogin" prefHeight="30.0" prefWidth="177.0" styleClass="home" text="Supplies" textFill="LINEN">
+                  <Button alignment="CENTER" layoutX="22.0" layoutY="220.0" lineSpacing="40.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="177.0" styleClass="home" text="Supplies" textFill="LINEN">
                      <font>
                         <Font name="Times New Roman Bold" size="17.0" />
                      </font>
