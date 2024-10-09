@@ -2,78 +2,63 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="addemployee" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.AddEmployee">
    <children>
-      <VBox layoutY="-2.0" prefHeight="450.0" prefWidth="244.0">
-         <children>
-            <ImageView fitHeight="150.0" fitWidth="244.0">
-               <image>
-                  <Image url="@image/e.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="244.0">
-               <image>
-                  <Image url="@image/em.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="244.0">
-               <image>
-                  <Image url="@image/employee2.jpg" />
-               </image>
-            </ImageView>
-         </children>
-      </VBox>
-      <Label layoutX="373.0" layoutY="14.0" prefHeight="37.0" prefWidth="244.0" text=" Employees" textAlignment="CENTER" textFill="#321901">
+      <Label layoutX="246.0" layoutY="12.0" prefHeight="37.0" prefWidth="244.0" styleClass="textemployee" text="    Employees" textAlignment="CENTER" textFill="#321901">
          <font>
-            <Font name="Dutch 801 Extra Bold BT" size="37.0" />
+            <Font name="Dutch 801 Extra Bold BT" size="32.0" />
          </font>
       </Label>
-      <Line endX="-106.0" endY="343.0" layoutX="350.0" layoutY="105.0" startX="-106.0" startY="-105.0" stroke="#1b0d00" />
-      <TableView layoutX="275.0" layoutY="183.0" prefHeight="255.0" prefWidth="397.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
-        </columns>
-      </TableView>
-      <Line endX="100.0" layoutX="473.0" layoutY="52.0" startX="-100.0" stroke="#653101" />
-      <ImageView fitHeight="47.0" fitWidth="62.0" layoutX="638.0" layoutY="6.0">
+      <Line endX="93.0" layoutX="351.0" layoutY="45.0" startX="-78.0" stroke="#653101" />
+      <ImageView fitHeight="62.0" fitWidth="72.0" layoutX="636.0" layoutY="3.0">
          <image>
             <Image url="@image/house.png" />
          </image>
       </ImageView>
-      <Button layoutX="298.0" layoutY="71.0" mnemonicParsing="false" onAction="#goToadddemployee" prefHeight="28.0" prefWidth="134.0" styleClass="home" text="Add Employee" textFill="LINEN">
+      <Button layoutX="21.0" layoutY="385.0" mnemonicParsing="false" onAction="#goToadddemployee" prefHeight="47.0" prefWidth="210.0" styleClass="home" text="Add Employee" textFill="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="249.0" layoutY="325.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="210.0" styleClass="home" text="Search &amp; View Employee" textFill="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="479.0" layoutY="385.0" mnemonicParsing="false" onAction="#goToeditemployee" prefHeight="47.0" prefWidth="210.0" styleClass="home" text="Edit Employee" textFill="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="6.0" layoutY="6.0" mnemonicParsing="false" onAction="#goToLogin1" prefHeight="37.0" prefWidth="72.0" styleClass="home" text="Menu" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="15.0" />
          </font>
       </Button>
-      <Button layoutX="531.0" layoutY="71.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="134.0" styleClass="home" text="Delete Employee" textFill="LINEN">
-         <font>
-            <Font name="Times New Roman Bold" size="15.0" />
-         </font>
-      </Button>
-      <Button layoutX="298.0" layoutY="140.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="134.0" styleClass="home" text="Search Employee" textFill="LINEN">
-         <font>
-            <Font name="Times New Roman Bold" size="15.0" />
-         </font>
-      </Button>
-      <Button layoutX="531.0" layoutY="140.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="134.0" styleClass="home" text="Edit Employee" textFill="LINEN">
-         <font>
-            <Font name="Times New Roman Bold" size="15.0" />
-         </font>
-      </Button>
-      <Button layoutX="412.0" layoutY="105.0" mnemonicParsing="false" onAction="#goToLogin1" prefHeight="28.0" prefWidth="134.0" styleClass="home" text="Menu" textFill="LINEN">
-         <font>
-            <Font name="Times New Roman Bold" size="15.0" />
-         </font>
-      </Button>
+      <ImageView fitHeight="240.0" fitWidth="240.0" layoutX="-7.0" layoutY="123.0">
+         <image>
+            <Image url="@image/Screenshot%202024-10-09%20165322.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="235.0" fitWidth="235.0" layoutX="229.0" layoutY="64.0">
+         <image>
+            <Image url="@image/Screenshot%202024-10-09%20173528.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="240.0" fitWidth="240.0" layoutX="464.0" layoutY="132.0">
+         <image>
+            <Image url="@image/Screenshot%202024-10-09%20171038.png" />
+         </image>
+      </ImageView>
+      <Circle fill="#381b0066" layoutX="115.0" layoutY="243.0" radius="110.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#381b0066" layoutX="346.0" layoutY="181.0" radius="116.5" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#381b0066" layoutX="584.0" layoutY="249.0" radius="115.0" stroke="BLACK" strokeType="INSIDE" />
    </children>
 </AnchorPane>

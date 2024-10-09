@@ -103,7 +103,7 @@
                   <Font name="Times New Roman Bold" size="21.0" />
                </font>
             </Button>
-            <Button layoutX="523.0" layoutY="348.0" mnemonicParsing="false" onAction="#goToLogin1" prefHeight="38.0" prefWidth="90.0" styleClass="home" text="Cancel" textFill="LINEN">
+            <Button layoutX="523.0" layoutY="348.0" mnemonicParsing="false" onAction="#goTomenu" prefHeight="38.0" prefWidth="90.0" styleClass="home" text="Cancel" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="21.0" />
                </font>
