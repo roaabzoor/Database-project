@@ -45,7 +45,7 @@
                         <Font name="Times New Roman Bold" size="17.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER" layoutX="22.0" layoutY="198.0" lineSpacing="40.0" mnemonicParsing="false" onAction="#goToLogin" prefHeight="30.0" prefWidth="177.0" styleClass="home" text="Veterinarian" textFill="LINEN">
+                  <Button alignment="CENTER" layoutX="22.0" layoutY="198.0" lineSpacing="40.0" mnemonicParsing="false" onAction="#goToVeterinarian" prefHeight="30.0" prefWidth="177.0" styleClass="home" text="Veterinarian" textFill="LINEN">
                      <font>
                         <Font name="Times New Roman Bold" size="17.0" />
                      </font>
