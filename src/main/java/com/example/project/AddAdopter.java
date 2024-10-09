@@ -19,4 +19,9 @@ public class AddAdopter {
         adopter.getChildren().setAll(root);
 
     }
+    public void gotoaddeditadopt() throws IOException {
+        AnchorPane root = FXMLLoader.load(getClass().getResource("editadopter.fxml"));
+        adopter.getChildren().setAll(root);
+
+    }
 }

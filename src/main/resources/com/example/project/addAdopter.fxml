@@ -40,7 +40,7 @@
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="406.0" layoutY="372.0" prefHeight="33.0" prefWidth="250.0" styleClass="lable" stylesheets="@css/project.css" text="Edit &amp; view an adopter's file" textFill="#391c00">
+            <JFXButton layoutX="406.0" layoutY="372.0" onAction="#gotoaddeditadopt" prefHeight="33.0" prefWidth="250.0" styleClass="lable" stylesheets="@css/project.css" text="Edit &amp; view an adopter's file" textFill="#391c00">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>

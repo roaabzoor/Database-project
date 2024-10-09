@@ -13,7 +13,10 @@ public class Addnewadopter {
         AnchorPane root = FXMLLoader.load(getClass().getResource("menu.fxml"));
         addnew.getChildren().setAll(root);
     }
-
+    public void gotoaddadopter() throws IOException {
+        AnchorPane root = FXMLLoader.load(getClass().getResource("addAdopter.fxml"));
+        addnew.getChildren().setAll(root);
+    }
 
 
 }

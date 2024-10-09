@@ -35,12 +35,13 @@
 }
 .textemployee {
     -fx-background-color: rgba(247, 234, 221, 0.5);
-
-
-
     -fx-background-radius: 15;
 }
 .home {
     -fx-background-color: #391C00;
+    -fx-background-radius: 15;
+}
+.textadopter {
+    -fx-background-color: rgba(47, 23, 0, 0.5);
     -fx-background-radius: 15;
 }
