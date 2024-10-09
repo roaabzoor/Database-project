@@ -19,4 +19,8 @@ public class AddEmployee {
         AnchorPane root= FXMLLoader.load(getClass().getResource("menu.fxml"));
         addemployee.getChildren().setAll(root);
     }
+    public void goToadddemployee() throws IOException {
+        AnchorPane root= FXMLLoader.load(getClass().getResource("adddemployee.fxml"));
+        addemployee.getChildren().setAll(root);
+    }
 }

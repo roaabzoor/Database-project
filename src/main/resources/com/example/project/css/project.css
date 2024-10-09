@@ -30,6 +30,16 @@
     -fx-background-color: rgba(57, 28, 0, 0.5);
     -fx-background-radius: 15;;
 }
+.adddemployee {
+    -fx-background-color: rgba(57, 28, 0, 0.5);
+}
+.textemployee {
+    -fx-background-color: rgba(247, 234, 221, 0.5);
+
+
+
+    -fx-background-radius: 15;
+}
 .home {
     -fx-background-color: #391C00;
     -fx-background-radius: 15;

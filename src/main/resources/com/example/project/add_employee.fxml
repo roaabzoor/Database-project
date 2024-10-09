@@ -50,7 +50,7 @@
             <Image url="@image/house.png" />
          </image>
       </ImageView>
-      <Button layoutX="298.0" layoutY="71.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="134.0" styleClass="home" text="Add Employee" textFill="LINEN">
+      <Button layoutX="298.0" layoutY="71.0" mnemonicParsing="false" onAction="#goToadddemployee" prefHeight="28.0" prefWidth="134.0" styleClass="home" text="Add Employee" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="15.0" />
          </font>
