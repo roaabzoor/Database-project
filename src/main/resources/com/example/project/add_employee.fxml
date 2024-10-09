@@ -27,7 +27,7 @@
             <Font name="Times New Roman Bold" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="249.0" layoutY="325.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="210.0" styleClass="home" text="Search &amp; View Employee" textFill="LINEN">
+      <Button layoutX="249.0" layoutY="325.0" mnemonicParsing="false" onAction="#goTosearchemployee" prefHeight="47.0" prefWidth="210.0" styleClass="home" text="Search &amp; View Employee" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="17.0" />
          </font>
@@ -44,19 +44,17 @@
       </Button>
       <ImageView fitHeight="240.0" fitWidth="240.0" layoutX="-7.0" layoutY="123.0">
          <image>
-            <Image url="@image/Screenshot%202024-10-09%20165322.png" />
+            <Image url="@image/addemp1.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="235.0" fitWidth="235.0" layoutX="229.0" layoutY="64.0">
          <image>
-            <Image url="@image/Screenshot%202024-10-09%20173528.png" />
-         </image>
-      </ImageView>
+            <Image url="@image/ad4.png" />
+         </image></ImageView>
       <ImageView fitHeight="240.0" fitWidth="240.0" layoutX="464.0" layoutY="132.0">
          <image>
-            <Image url="@image/Screenshot%202024-10-09%20171038.png" />
-         </image>
-      </ImageView>
+            <Image url="@image/ad3.png" />
+         </image></ImageView>
       <Circle fill="#381b0066" layoutX="115.0" layoutY="243.0" radius="110.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="#381b0066" layoutX="346.0" layoutY="181.0" radius="116.5" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="#381b0066" layoutX="584.0" layoutY="249.0" radius="115.0" stroke="BLACK" strokeType="INSIDE" />

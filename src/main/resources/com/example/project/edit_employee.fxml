@@ -13,7 +13,7 @@
    <children>
       <ImageView fitHeight="459.0" fitWidth="370.0" layoutX="-60.0">
          <image>
-            <Image url="@image/Screenshot%202024-10-09%20151942.png" />
+            <Image url="@image/editemp.png" />
          </image>
       </ImageView>
       <Label layoutX="296.0" layoutY="14.0" prefHeight="37.0" prefWidth="227.0" text=" Edit Employee" textFill="#391c00">
