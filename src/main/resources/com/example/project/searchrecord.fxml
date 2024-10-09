@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="searchrecord" prefHeight="450.0" prefWidth="700.0" styleClass="textemployee" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Searchrecord">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="671.0" styleClass="textadopter" stylesheets="@css/project.css" text=" Search medical record." textFill="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="640.0" layoutY="18.0" onMouseClicked="#goTomidical" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/back-button.png" />
+         </image>
+      </ImageView>
+      <TableView layoutX="18.0" layoutY="67.0" prefHeight="365.0" prefWidth="331.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="369.0" layoutY="284.0" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Search " textFill="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="361.0" layoutY="170.0" prefHeight="44.0" prefWidth="130.0" text="Veterinarian ID" textFill="#391c00">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField layoutX="503.0" layoutY="127.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
+      <Label layoutX="364.0" layoutY="225.0" prefHeight="35.0" prefWidth="99.0" text="Pet ID" textFill="#391c00">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField layoutX="503.0" layoutY="174.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
+      <JFXTextField layoutX="503.0" layoutY="225.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
+      <Label layoutX="354.0" layoutY="127.0" prefHeight="44.0" prefWidth="143.0" text="MedicalRecordID" textFill="#391c00">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="360.0" layoutY="83.0" prefHeight="35.0" prefWidth="106.0" styleClass="LOGIN" stylesheets="@css/project.css" text=" Search by" textFill="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="524.0" layoutY="284.0" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Delete" textFill="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="369.0" layoutY="340.0" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="View all" textFill="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="524.0" layoutY="340.0" onAction="#goTomenu" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Cancel" textFill="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -37,19 +37,14 @@
                      </font>
                   </Label>
                   <Line endX="123.00003051757812" endY="-40.40000915527344" layoutX="101.0" layoutY="121.0" startX="-50.00000762939453" startY="-40.40000915527344" stroke="#391c00" />
-                  <Label layoutX="27.0" layoutY="125.0" prefHeight="50.0" prefWidth="152.0" text="Adopter ID:" textFill="LINEN">
-                     <font>
-                        <Font name="Times New Roman Bold" size="23.0" />
-                     </font>
-                  </Label>
-                  <JFXTextField layoutX="174.0" layoutY="140.0" prefHeight="28.0" prefWidth="152.0" styleClass="textemployee" stylesheets="@css/project.css" />
-                  <Label layoutX="25.0" layoutY="182.0" prefHeight="50.0" prefWidth="129.0" text="First Name:" textFill="LINEN">
+                  <JFXTextField alignment="CENTER" layoutX="174.0" layoutY="140.0" prefHeight="28.0" prefWidth="152.0" styleClass="textemployee" stylesheets="@css/project.css" />
+                  <Label layoutX="25.0" layoutY="129.0" prefHeight="50.0" prefWidth="129.0" text="First Name:" textFill="LINEN">
                      <font>
                         <Font name="Times New Roman Bold" size="23.0" />
                      </font>
                   </Label>
                   <JFXTextField layoutX="174.0" layoutY="193.0" prefHeight="28.0" prefWidth="152.0" styleClass="textemployee" stylesheets="@css/project.css" />
-                  <Label layoutX="25.0" layoutY="246.0" prefHeight="50.0" prefWidth="114.0" text="Last Name:" textFill="LINEN">
+                  <Label layoutX="25.0" layoutY="175.0" prefHeight="50.0" prefWidth="114.0" text="Last Name:" textFill="LINEN">
                      <font>
                         <Font name="Times New Roman Bold" size="23.0" />
                      </font>
@@ -88,6 +83,11 @@
                         <Font name="Times New Roman Bold" size="25.0" />
                      </font>
                   </JFXButton>
+                  <Label layoutX="33.0" layoutY="243.0" prefHeight="50.0" prefWidth="114.0" text="Age:" textFill="LINEN">
+                     <font>
+                        <Font name="Times New Roman Bold" size="28.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
          </children>
