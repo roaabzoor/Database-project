@@ -33,10 +33,10 @@
                <children>
                   <Label layoutX="51.0" layoutY="33.0" prefHeight="50.0" prefWidth="232.0" text="Adopter" textFill="WHITE">
                      <font>
-                        <Font name="Times New Roman Bold" size="30.0" />
+                        <Font name="Times New Roman Bold" size="48.0" />
                      </font>
                   </Label>
-                  <Line endX="61.399993896484375" endY="-49.99998474121094" layoutX="101.0" layoutY="121.0" startX="-57.79999542236328" startY="-49.99998474121094" />
+                  <Line endX="123.00003051757812" endY="-40.40000915527344" layoutX="101.0" layoutY="121.0" startX="-50.00000762939453" startY="-40.40000915527344" />
                   <Label layoutX="27.0" layoutY="125.0" prefHeight="50.0" prefWidth="152.0" text="Adopter ID:" textFill="WHITE">
                      <font>
                         <Font name="Times New Roman Bold" size="23.0" />

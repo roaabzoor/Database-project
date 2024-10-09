@@ -24,23 +24,23 @@
                </image>
             </ImageView>
             <Line endX="586.0000610351562" endY="-7.62939453125E-6" layoutX="114.0" layoutY="67.0" startX="-114.99999237060547" startY="-7.62939453125E-6" />
-            <ImageView fitHeight="280.0" fitWidth="234.0" layoutX="79.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="265.0" fitWidth="233.0" layoutX="5.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@image/addado.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="342.0" fitWidth="250.0" layoutX="406.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="268.0" fitWidth="262.0" layoutX="251.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@image/editadopt.jpg" />
+                  <Image url="@image/editadopt3.jpg" />
                </image>
             </ImageView>
-            <Line endX="165.10003662109375" endY="61.399993896484375" layoutX="195.0" layoutY="389.0" startX="165.10003662109375" startY="-321.5" />
-            <JFXButton fx:id="openadopt" layoutX="84.0" layoutY="372.0" onAction="#gotoaddnewadopt" prefHeight="32.0" prefWidth="225.0" styleClass="lable" stylesheets="@css/project.css" text="Open a new adopter file" textFill="#391c00">
+            <Line endX="35.20002746582031" endY="61.39996337890625" layoutX="195.0" layoutY="389.0" startX="35.20002746582031" startY="-321.5" />
+            <JFXButton fx:id="openadopt" layoutX="5.0" layoutY="369.0" onAction="#gotoaddnewadopt" prefHeight="34.0" prefWidth="212.0" styleClass="lable" stylesheets="@css/project.css" text="Open a new adopter file" textFill="#391c00">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="406.0" layoutY="372.0" onAction="#gotoaddeditadopt" prefHeight="33.0" prefWidth="250.0" styleClass="lable" stylesheets="@css/project.css" text="Edit &amp; view an adopter's file" textFill="#391c00">
+            <JFXButton layoutX="238.0" layoutY="369.0" onAction="#gotoaddeditadopt" prefHeight="34.0" prefWidth="219.0" styleClass="lable" stylesheets="@css/project.css" text="Edit  an adopter's file" textFill="#391c00">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
@@ -50,7 +50,18 @@
                   <Image url="@image/house.png" />
                </image>
             </ImageView>
+            <ImageView fitHeight="265.0" fitWidth="179.0" layoutX="501.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/editadopt.jpg" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="484.0" layoutY="369.0" onAction="#gotoaddeditadopt" prefHeight="34.0" prefWidth="212.0" styleClass="lable" stylesheets="@css/project.css" text="Search an adopter's file" textFill="#391c00">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </JFXButton>
          </children>
       </Pane>
+      <Line endX="267.60003662109375" endY="55.592926025390625" layoutX="205.0" layoutY="399.0" startX="267.60003662109375" startY="-328.5" />
    </children>
 </AnchorPane>
