@@ -35,7 +35,7 @@
                </image>
             </ImageView>
             <Line endX="165.10003662109375" endY="61.399993896484375" layoutX="195.0" layoutY="389.0" startX="165.10003662109375" startY="-321.5" />
-            <JFXButton layoutX="84.0" layoutY="372.0" prefHeight="32.0" prefWidth="225.0" styleClass="lable" stylesheets="@css/project.css" text="Open a new adopter file" textFill="#391c00">
+            <JFXButton fx:id="openadopt" layoutX="84.0" layoutY="372.0" onAction="#gotoaddnewadopt" prefHeight="32.0" prefWidth="225.0" styleClass="lable" stylesheets="@css/project.css" text="Open a new adopter file" textFill="#391c00">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
