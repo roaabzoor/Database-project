@@ -19,7 +19,7 @@
                   <Font name="Times New Roman Bold" size="26.0" />
                </font>
             </Label>
-            <ImageView fitHeight="40.0" fitWidth="50.0" layoutX="604.0" layoutY="13.0" onMouseClicked="#gotomenu" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="40.0" fitWidth="50.0" layoutX="604.0" layoutY="13.0" onMouseClicked="#gotoaddadopter" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@image/back-button.png" />
                </image>
@@ -76,7 +76,7 @@
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="509.0" layoutY="360.0" onAction="#gotoaddadopter" prefHeight="40.0" prefWidth="130.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Cancel" textFill="LINEN">
+      <JFXButton layoutX="509.0" layoutY="360.0" onAction="#gotomenu" prefHeight="40.0" prefWidth="130.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Cancel" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>

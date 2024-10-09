@@ -15,4 +15,8 @@ public class Editadopter {
         AnchorPane root = FXMLLoader.load(getClass().getResource("EditAdopterinfo.fxml"));
         searchadopter.getChildren().setAll(root);
     }
+    public void gotomenu() throws IOException {
+        AnchorPane root = FXMLLoader.load(getClass().getResource("menu.fxml"));
+        searchadopter.getChildren().setAll(root);
+    }
 }
