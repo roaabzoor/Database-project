@@ -35,6 +35,10 @@ public class Menu implements Initializable {
         AnchorPane root= FXMLLoader.load(getClass().getResource("Veterinarian.fxml"));
         menu.getChildren().setAll(root);
     }
+    public void goTopet() throws IOException {
+        AnchorPane root= FXMLLoader.load(getClass().getResource("Pet.fxml"));
+        menu.getChildren().setAll(root);
+    }
     public void gotoaddadpter() throws IOException{
         AnchorPane root = FXMLLoader.load(getClass().getResource("addAdopter.fxml"));
         menu.getChildren().setAll(root);

@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="menu" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Menu">
+<AnchorPane fx:id="menu" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Menu">
    <children>
       <Pane layoutX="7.0" layoutY="5.0" prefHeight="440.0" prefWidth="210.0" styleClass="menu" stylesheets="@css/project.css">
          <children>
@@ -40,7 +40,7 @@
                         <Font name="Times New Roman Bold" size="17.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER" lineSpacing="40.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="177.0" styleClass="home" text="Pets" textFill="LINEN">
+                  <Button alignment="CENTER" lineSpacing="40.0" mnemonicParsing="false" onAction="#goTopet" prefHeight="30.0" prefWidth="177.0" styleClass="home" text="Pets" textFill="LINEN">
                      <font>
                         <Font name="Times New Roman Bold" size="17.0" />
                      </font>
