@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="editadopterinfo" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.EditAdopterinfo">
    <children>
       <Pane layoutX="17.0" layoutY="14.0" prefHeight="66.0" prefWidth="670.0" styleClass="aa" stylesheets="@css/project.css">
@@ -71,7 +70,7 @@
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Label>
-      <JFXButton layoutX="326.0" layoutY="360.0" prefHeight="40.0" prefWidth="130.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Save" textFill="LINEN">
+      <JFXButton layoutX="326.0" layoutY="360.0" prefHeight="40.0" prefWidth="130.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Update" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>

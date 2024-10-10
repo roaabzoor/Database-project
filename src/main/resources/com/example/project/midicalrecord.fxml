@@ -28,32 +28,32 @@
                   <Line endX="177.89291381835938" endY="-103.70000457763672" layoutX="12.0" layoutY="148.0" startX="-1.0999870300292969" startY="-103.70000457763672" stroke="#391c00" />
                </children>
             </Pane>
-            <ImageView fitHeight="220.0" fitWidth="245.0" layoutX="14.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="232.0" fitWidth="194.0" layoutX="14.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@image/midical1.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="220.0" fitWidth="245.0" layoutX="488.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="232.0" fitWidth="194.0" layoutX="488.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@image/midical2.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="233.0" fitWidth="180.0" layoutX="258.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="243.0" fitWidth="196.0" layoutX="251.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@image/midical3.png" />
                </image>
             </ImageView>
-            <JFXButton layoutX="519.0" layoutY="309.0" prefHeight="40.0" prefWidth="145.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Editing  record" textFill="LINEN">
+            <JFXButton layoutX="517.0" layoutY="317.0" onAction="#goToeditrecord" prefHeight="40.0" prefWidth="145.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Editing  record" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="285.0" layoutY="390.0" onAction="#goTsearchrecord" prefHeight="40.0" prefWidth="145.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Search record" textFill="LINEN">
+            <JFXButton layoutX="278.0" layoutY="388.0" onAction="#goTsearchrecord" prefHeight="40.0" prefWidth="145.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Search record" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="31.0" layoutY="309.0" onAction="#goToaddrecord" prefHeight="40.0" prefWidth="145.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Add record" textFill="LINEN">
+            <JFXButton layoutX="36.0" layoutY="317.0" onAction="#goToaddrecord" prefHeight="40.0" prefWidth="145.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Add record" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>

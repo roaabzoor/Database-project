@@ -21,4 +21,8 @@ public class Midicalrecord {
         AnchorPane root= FXMLLoader.load(getClass().getResource("searchrecord.fxml"));
         midicalrecord.getChildren().setAll(root);
     }
+    public void goToeditrecord() throws IOException {
+        AnchorPane root= FXMLLoader.load(getClass().getResource("editrecord.fxml"));
+        midicalrecord.getChildren().setAll(root);
+    }
 }
