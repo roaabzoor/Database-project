@@ -14,5 +14,13 @@ public class Veterinarian {
         AnchorPane root= FXMLLoader.load(getClass().getResource("menu.fxml"));
         Veterinarian.getChildren().setAll(root);
     }
+    public void goToaddVeterinarian() throws IOException {
+        AnchorPane root= FXMLLoader.load(getClass().getResource("addVeterinarian.fxml"));
+        Veterinarian.getChildren().setAll(root);
+    }
+    public void goTosearchVeterinarian() throws IOException {
+        AnchorPane root= FXMLLoader.load(getClass().getResource("searchVeterinarian.fxml"));
+        Veterinarian.getChildren().setAll(root);
+    }
 
 }

@@ -56,12 +56,12 @@
             <Image url="@image/doctoranimal5.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="16.0" layoutY="96.0" mnemonicParsing="false" prefHeight="8.0" prefWidth="210.0" styleClass="home" text="Add Veterinarian" textFill="LINEN">
+      <Button layoutX="16.0" layoutY="96.0" mnemonicParsing="false" onAction="#goToaddVeterinarian" prefHeight="8.0" prefWidth="210.0" styleClass="home" text="Add Veterinarian" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="3.0" layoutY="144.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="235.0" styleClass="home" text="Search &amp; View Veterinarian" textFill="LINEN">
+      <Button layoutX="3.0" layoutY="144.0" mnemonicParsing="false" onAction="#goTosearchVeterinarian" prefHeight="33.0" prefWidth="235.0" styleClass="home" text="Search &amp; View Veterinarian" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="17.0" />
          </font>
