@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="adddemployee" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Adddemployee">
+<AnchorPane fx:id="adddemployee" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Adddemployee">
    <children>
       <HBox prefHeight="450.0" prefWidth="700.0">
          <children>
@@ -36,7 +36,7 @@
       </HBox>
       <Pane prefHeight="400.0" prefWidth="600.0" styleClass="adddemployee" stylesheets="@css/project.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="260.0" layoutY="14.0" prefHeight="29.0" prefWidth="201.0" text=" Add Employee" textFill="LINEN">
+            <Label layoutX="260.0" layoutY="14.0" prefHeight="36.0" prefWidth="214.0" text=" Add Employee" textFill="LINEN">
                <font>
                   <Font name="David Bold" size="25.0" />
                </font>
@@ -93,17 +93,17 @@
                </font>
             </Label>
             <JFXTextField layoutX="519.0" layoutY="292.0" styleClass="textemployee" />
-            <Button layoutX="300.0" layoutY="348.0" mnemonicParsing="false" onAction="#goToLogin1" prefHeight="38.0" prefWidth="106.0" styleClass="home" text=" Back " textFill="LINEN">
+            <Button layoutX="300.0" layoutY="348.0" mnemonicParsing="false" onAction="#goToLogin1" prefHeight="38.0" prefWidth="112.0" styleClass="home" text=" Back " textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="21.0" />
                </font>
             </Button>
-            <Button layoutX="56.0" layoutY="355.0" mnemonicParsing="false" onAction="#goToLogin1" prefHeight="38.0" prefWidth="106.0" styleClass="home" text="Save" textFill="LINEN">
+            <Button layoutX="56.0" layoutY="355.0" mnemonicParsing="false" onAction="#goToLogin1" prefHeight="38.0" prefWidth="112.0" styleClass="home" text="Save" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="21.0" />
                </font>
             </Button>
-            <Button layoutX="523.0" layoutY="348.0" mnemonicParsing="false" onAction="#goTomenu" prefHeight="38.0" prefWidth="106.0" styleClass="home" text="Cancel" textFill="LINEN">
+            <Button layoutX="523.0" layoutY="348.0" mnemonicParsing="false" onAction="#goTomenu" prefHeight="38.0" prefWidth="112.0" styleClass="home" text="Cancel" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="21.0" />
                </font>

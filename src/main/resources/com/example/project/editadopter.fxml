@@ -34,54 +34,36 @@
             </ImageView>
             <Line endX="-85.99996948242188" endY="-84.0" layoutX="275.0" layoutY="342.0" startX="-270.0" startY="-84.0" />
             <Line endX="-95.99996948242188" endY="88.695068359375" layoutX="285.0" layoutY="352.0" startX="-280.0" startY="88.695068359375" />
-            <JFXButton layoutX="223.0" layoutY="399.0" prefHeight="33.0" prefWidth="87.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Search" textFill="LINEN">
+            <JFXButton layoutX="488.0" layoutY="277.0" prefHeight="28.0" prefWidth="121.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Search" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="457.0" layoutY="399.0" prefHeight="33.0" prefWidth="87.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Veiw all" textFill="LINEN">
+            <JFXButton layoutX="488.0" layoutY="357.0" prefHeight="33.0" prefWidth="121.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Veiw all" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="338.0" layoutY="399.0" prefHeight="33.0" prefWidth="87.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Delete" textFill="LINEN">
+            <JFXButton layoutX="488.0" layoutY="316.0" prefHeight="33.0" prefWidth="121.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Delete" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </JFXButton>
-            <Pane layoutX="202.0" layoutY="259.0" prefHeight="129.0" prefWidth="490.0" styleClass="lable" stylesheets="@css/project.css">
+            <Pane layoutX="218.0" layoutY="306.0" prefHeight="135.0" prefWidth="245.0" styleClass="lable" stylesheets="@css/project.css">
                <children>
-                  <Label layoutX="7.0" layoutY="34.0" prefHeight="50.0" prefWidth="99.0" text="First Name:" textFill="#391c00">
+                  <Label layoutX="7.0" layoutY="41.0" prefHeight="50.0" prefWidth="99.0" text="First Name:" textFill="#391c00">
                      <font>
                         <Font name="Times New Roman Bold" size="18.0" />
                      </font>
                   </Label>
                   <JFXTextField layoutX="106.0" layoutY="9.0" prefHeight="25.0" prefWidth="121.0" stylesheets="@css/project.css" />
-                  <Label layoutX="256.0" layoutY="9.0" prefHeight="50.0" prefWidth="87.0" text="Address:" textFill="#391c00">
-                     <font>
-                        <Font name="Times New Roman Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="262.0" layoutY="76.0" prefHeight="50.0" prefWidth="87.0" text="Email:" textFill="#391c00">
-                     <font>
-                        <Font name="Times New Roman Bold" size="18.0" />
-                     </font>
-                  </Label>
                   <JFXTextField layoutX="102.0" layoutY="41.0" prefHeight="25.0" prefWidth="129.0" styleClass="textemployee" stylesheets="@css/project.css" />
-                  <JFXTextField layoutX="102.0" layoutY="76.0" prefHeight="25.0" prefWidth="129.0" styleClass="textemployee" stylesheets="@css/project.css" />
-                  <Label layoutX="7.0" layoutY="68.0" prefHeight="50.0" prefWidth="99.0" text="Last Name:" textFill="#391c00">
+                  <Label layoutX="7.0" layoutY="75.0" prefHeight="50.0" prefWidth="99.0" text="Phone Num:" textFill="#391c00">
                      <font>
                         <Font name="Times New Roman Bold" size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="256.0" layoutY="45.0" prefHeight="50.0" prefWidth="99.0" text="Phone Num:" textFill="#391c00">
-                     <font>
-                        <Font name="Times New Roman Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <JFXTextField layoutX="355.0" layoutY="10.0" prefHeight="31.0" prefWidth="129.0" styleClass="textemployee" stylesheets="@css/project.css" />
-                  <JFXTextField layoutX="355.0" layoutY="45.0" prefHeight="31.0" prefWidth="129.0" styleClass="textemployee" stylesheets="@css/project.css" />
-                  <JFXTextField layoutX="355.0" layoutY="80.0" prefHeight="25.0" prefWidth="129.0" styleClass="textemployee" stylesheets="@css/project.css" />
+                  <JFXTextField layoutX="106.0" layoutY="75.0" prefHeight="31.0" prefWidth="129.0" styleClass="textemployee" stylesheets="@css/project.css" />
                   <Label layoutX="7.0" layoutY="1.0" prefHeight="50.0" prefWidth="68.0" text="ID:" textFill="#391c00">
                      <font>
                         <Font name="Times New Roman Bold" size="20.0" />
@@ -89,11 +71,16 @@
                   </Label>
                </children>
             </Pane>
-            <JFXButton layoutX="573.0" layoutY="399.0" onAction="#gotomenu" prefHeight="33.0" prefWidth="87.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Cancle" textFill="LINEN">
+            <JFXButton layoutX="488.0" layoutY="396.0" onAction="#gotomenu" prefHeight="31.0" prefWidth="121.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Cancle" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </JFXButton>
+            <Label layoutX="218.0" layoutY="265.0" prefHeight="25.0" prefWidth="167.0" text="Search by :" textFill="#391c00">
+               <font>
+                  <Font name="Times New Roman Bold" size="24.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
       <Line endX="-95.49996948242188" endY="-93.5" layoutX="285.0" layoutY="352.0" startX="-95.99996948242188" startY="88.695068359375" />

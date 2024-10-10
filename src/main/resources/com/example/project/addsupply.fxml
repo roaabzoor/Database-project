@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addsupplies" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Addsupply">
+   <children>
+      <ImageView fitHeight="462.0" fitWidth="262.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/addsupply.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="462.0" fitWidth="163.0" layoutX="537.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/addsupp.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="256.0" layoutY="46.0" prefHeight="36.0" prefWidth="187.0" text="Add new supply." textFill="#391c00">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+      </Label>
+      <Line endX="83.20001220703125" endY="-6.800010681152344" layoutX="342.0" layoutY="82.0" startX="-86.0" startY="-6.800010681152344" stroke="#4e3620" />
+      <Label layoutX="198.0" layoutY="179.0" prefHeight="36.0" prefWidth="128.0" text="supply name:" textFill="#391c00">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="198.0" layoutY="222.0" prefHeight="36.0" prefWidth="128.0" text="Quantity:" textFill="#391c00">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="198.0" layoutY="267.0" prefHeight="36.0" prefWidth="119.0" text="TotalCost:" textFill="#391c00">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="198.0" layoutY="129.0" prefHeight="36.0" prefWidth="142.0" text="SupplierName:" textFill="#391c00">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField layoutX="341.0" layoutY="134.0" styleClass="textemployee" />
+      <JFXTextField layoutX="341.0" layoutY="184.0" styleClass="textemployee" />
+      <JFXTextField layoutX="341.0" layoutY="227.0" styleClass="textemployee" />
+      <JFXTextField layoutX="340.0" layoutY="272.0" styleClass="textemployee" />
+      <JFXButton layoutX="201.0" layoutY="347.0" prefHeight="46.0" prefWidth="135.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Save" textFill="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="358.0" layoutY="347.0" onAction="#goTosupply" prefHeight="46.0" prefWidth="135.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Back" textFill="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="23.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

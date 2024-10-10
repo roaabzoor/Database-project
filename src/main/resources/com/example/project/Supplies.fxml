@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="supplies" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Supplies">
+   <children>
+      <ImageView fitHeight="451.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/supply.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="-173.0" layoutY="173.0" prefHeight="105.0" prefWidth="451.0" rotate="-90.0" styleClass="supply" stylesheets="@css/project.css" text="     Pet House" textFill="#dfd2c6">
+         <font>
+            <Font name="Times New Roman Bold" size="64.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="36.0" fitWidth="45.0" layoutX="641.0" layoutY="14.0" onMouseClicked="#goTomenu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/back-button.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="342.0" layoutY="103.0" onAction="#goToaddsupply" prefHeight="54.0" prefWidth="242.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Add new supply" textFill="LINEN" AnchorPane.topAnchor="103.0">
+         <font>
+            <Font name="Times New Roman Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="342.0" layoutY="198.0" onAction="#goToeditsupply" prefHeight="54.0" prefWidth="242.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Edit  supply" textFill="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="342.0" layoutY="299.0" onAction="#goTosearchsupply" prefHeight="54.0" prefWidth="242.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Search &amp; view supply" textFill="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="19.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

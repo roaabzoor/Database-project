@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="editsupply" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Editsupply">
+   <children>
+      <ImageView fitHeight="450.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/egitsupply.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="-1.0" prefHeight="451.0" prefWidth="708.0" styleClass="adddemployee" stylesheets="@css/project.css">
+         <children>
+            <Label layoutX="329.0" layoutY="37.0" prefHeight="36.0" prefWidth="187.0" text="Edit supply." textFill="#361d07">
+               <font>
+                  <Font name="Times New Roman Bold" size="30.0" />
+               </font>
+            </Label>
+            <Line endX="66.60000610351562" endY="-6.5999908447265625" layoutX="415.0" layoutY="73.0" startX="-86.00003051757812" startY="-6.5999908447265625" stroke="#480000" />
+            <Label layoutX="276.0" layoutY="123.0" prefHeight="36.0" prefWidth="142.0" text="Supplier Name" textFill="#391c00">
+               <font>
+                  <Font name="Times New Roman Bold" size="22.0" />
+               </font>
+            </Label>
+            <JFXTextField layoutX="276.0" layoutY="159.0" prefHeight="36.0" prefWidth="142.0" styleClass="textemployee" />
+            <Label layoutX="484.0" layoutY="123.0" prefHeight="36.0" prefWidth="142.0" text="supply name" textFill="#391c00">
+               <font>
+                  <Font name="Times New Roman Bold" size="24.0" />
+               </font>
+            </Label>
+            <JFXTextField layoutX="480.0" layoutY="159.0" prefHeight="36.0" prefWidth="142.0" styleClass="textemployee" />
+            <Label layoutX="276.0" layoutY="215.0" prefHeight="36.0" prefWidth="128.0" text="Quantity" textFill="#391c00">
+               <font>
+                  <Font name="Times New Roman Bold" size="24.0" />
+               </font>
+            </Label>
+            <JFXTextField layoutX="276.0" layoutY="251.0" prefHeight="36.0" prefWidth="142.0" styleClass="textemployee" />
+            <JFXTextField layoutX="480.0" layoutY="251.0" prefHeight="36.0" prefWidth="142.0" styleClass="textemployee" />
+            <Label layoutX="488.0" layoutY="215.0" prefHeight="36.0" prefWidth="119.0" text="TotalCost" textFill="#391c00">
+               <font>
+                  <Font name="Times New Roman Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="36.0" fitWidth="45.0" layoutX="660.0" layoutY="10.0" onMouseClicked="#goTosupply" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/back-button.png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="315.0" layoutY="336.0" prefHeight="46.0" prefWidth="135.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Update" textFill="LINEN">
+               <font>
+                  <Font name="Times New Roman Bold" size="23.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="480.0" layoutY="336.0" onAction="#goTomenu" prefHeight="46.0" prefWidth="135.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Cancel" textFill="LINEN">
+               <font>
+                  <Font name="Times New Roman Bold" size="23.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

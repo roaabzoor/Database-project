@@ -15,7 +15,7 @@
          <children>
             <ImageView fitHeight="471.0" fitWidth="267.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@image/9d0e8a4e966b0355bc788c56711b6ce0.jpg" />
+                  <Image url="@image/forgetb.jpg" />
                </image>
             </ImageView>
             <Label layoutX="357.0" layoutY="96.0" prefHeight="52.0" prefWidth="309.0" text="Forget Your Password?" textFill="#391c00">

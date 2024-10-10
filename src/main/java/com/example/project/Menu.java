@@ -43,6 +43,10 @@ public class Menu implements Initializable {
         AnchorPane root = FXMLLoader.load(getClass().getResource("midicalrecord.fxml"));
         menu.getChildren().setAll(root);
     }
+    public void gotosupplies() throws IOException{
+        AnchorPane root = FXMLLoader.load(getClass().getResource("Supplies.fxml"));
+        menu.getChildren().setAll(root);
+    }
     public MediaView mv=new MediaView();
     public Button btnOpen;
     MediaPlayer mediaPlayer;
