@@ -43,7 +43,7 @@
                   <Font name="Times New Roman Bold" size="22.0" />
                </font>
             </Button>
-            <Button layoutX="432.0" layoutY="126.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="244.0" styleClass="home" text="Edit Pet" textFill="LINEN">
+            <Button layoutX="432.0" layoutY="126.0" mnemonicParsing="false" onAction="#goTosearchpet" prefHeight="47.0" prefWidth="244.0" styleClass="home" text="Edit Pet" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="22.0" />
                </font>

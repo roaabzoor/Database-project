@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="editepet" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Editpet">
+<AnchorPane fx:id="editepet" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Editpet">
    <children>
       <ImageView fitHeight="346.0" fitWidth="352.0" layoutX="352.0" layoutY="14.0">
          <image>
@@ -23,17 +23,17 @@
             <Font name="Times New Roman Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="534.0" layoutY="365.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="135.0" styleClass="home" text="ID" textFill="LINEN">
+      <Button layoutX="394.0" layoutY="369.0" mnemonicParsing="false" prefHeight="1.0" prefWidth="118.0" styleClass="home" text="ID" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="534.0" layoutY="404.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="135.0" styleClass="home" text="Breed" textFill="LINEN">
+      <Button layoutX="534.0" layoutY="369.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="135.0" styleClass="home" text="Breed" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="394.0" layoutY="403.0" mnemonicParsing="false" prefHeight="1.0" prefWidth="118.0" styleClass="home" text="Delete" textFill="LINEN">
+      <Button layoutX="469.0" layoutY="408.0" mnemonicParsing="false" prefHeight="1.0" prefWidth="118.0" styleClass="home" text="Delete" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="17.0" />
          </font>
@@ -54,7 +54,7 @@
             <Font name="David Bold" size="23.0" />
          </font>
       </Label>
-      <Line endX="109.20001220703125" endY="-6.399993896484375" layoutX="366.0" layoutY="48.0" startX="-99.5999755859375" startY="-6.399993896484375" stroke="#793d05" />
+      <Line endX="109.20001220703125" endY="-6.399993896484375" layoutX="366.0" layoutY="48.0" startX="-134.0" startY="-6.399993896484375" stroke="#793d05" />
       <TableView layoutX="20.0" layoutY="65.0" prefHeight="320.0" prefWidth="329.0">
         <columns>
           <TableColumn prefWidth="75.0" text="C1" />
