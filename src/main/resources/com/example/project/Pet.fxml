@@ -5,9 +5,9 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane fx:id="pet" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Pet">
    <children>
@@ -26,29 +26,33 @@
             <Image url="@image/t.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="47.0" fitWidth="58.0" layoutX="642.0" layoutY="7.0">
-         <image>
-            <Image url="@image/house.png" />
-         </image>
-      </ImageView>
+      <Pane prefHeight="451.0" prefWidth="700.0" styleClass="adddemployee">
+         <children>
+            <Button layoutX="228.0" layoutY="179.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="244.0" styleClass="home" text="View Pet" textFill="LINEN">
+               <font>
+                  <Font name="Times New Roman Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button layoutX="228.0" layoutY="70.0" mnemonicParsing="false" onAction="#goToaddpet" prefHeight="47.0" prefWidth="244.0" styleClass="home" text="Add Pet" textFill="LINEN">
+               <font>
+                  <Font name="Times New Roman Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button layoutX="36.0" layoutY="126.0" mnemonicParsing="false" onAction="#goToeditpet" prefHeight="47.0" prefWidth="244.0" styleClass="home" text="Search &amp; Delete Pet" textFill="LINEN">
+               <font>
+                  <Font name="Times New Roman Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button layoutX="432.0" layoutY="126.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="244.0" styleClass="home" text="Edit Pet" textFill="LINEN">
+               <font>
+                  <Font name="Times New Roman Bold" size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
       <Button layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onAction="#goToLogin1" prefHeight="37.0" prefWidth="72.0" styleClass="home" text="Menu" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="15.0" />
-         </font>
-      </Button>
-      <Button layoutX="245.0" layoutY="89.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="210.0" styleClass="home" text="Add Pet" textFill="LINEN">
-         <font>
-            <Font name="Times New Roman Bold" size="22.0" />
-         </font>
-      </Button>
-      <Button layoutX="99.0" layoutY="146.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="210.0" styleClass="home" text="Search &amp; View Pet" textFill="LINEN">
-         <font>
-            <Font name="Times New Roman Bold" size="22.0" />
-         </font>
-      </Button>
-      <Button layoutX="385.0" layoutY="158.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="210.0" styleClass="home" text="Edit Pet" textFill="LINEN">
-         <font>
-            <Font name="Times New Roman Bold" size="22.0" />
          </font>
       </Button>
       <Label layoutX="245.0" layoutY="14.0" prefHeight="33.0" prefWidth="203.0" text="            Pet" textFill="#4d2703">
@@ -57,5 +61,10 @@
          </font>
       </Label>
       <Line endX="21.0" layoutX="340.0" layoutY="42.0" startX="-23.0" stroke="#391c00" />
+      <ImageView fitHeight="47.0" fitWidth="58.0" layoutX="642.0" layoutY="7.0">
+         <image>
+            <Image url="@image/house.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

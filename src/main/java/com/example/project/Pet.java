@@ -11,9 +11,15 @@ public class Pet {
         AnchorPane root= FXMLLoader.load(getClass().getResource("menu.fxml"));
         pet.getChildren().setAll(root);
     }
-   /* public void goToaddpet() throws IOException {
-        AnchorPane root= FXMLLoader.load(getClass().getResource("addVeterinarian.fxml"));
+    public void goToaddpet() throws IOException {
+        AnchorPane root = FXMLLoader.load(getClass().getResource("addpet.fxml"));
         pet.getChildren().setAll(root);
+    }
+    public void goToeditpet() throws IOException {
+        AnchorPane root = FXMLLoader.load(getClass().getResource("editpet.fxml"));
+        pet.getChildren().setAll(root);
+    }
+   /*
     }
     public void goTosearchpet() throws IOException {
         AnchorPane root= FXMLLoader.load(getClass().getResource("searchVeterinarian.fxml"));

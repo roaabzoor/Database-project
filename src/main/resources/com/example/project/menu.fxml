@@ -64,7 +64,7 @@
             </VBox>
          </children>
       </Pane>
-      <MediaView fx:id="mv" fitHeight="300.0" fitWidth="300.0" layoutX="350.0" layoutY="93.0" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="93.0" />
+      <MediaView fx:id="mv" fitHeight="250.0" fitWidth="300.0" layoutX="332.0" layoutY="110.0" />
       <Button fx:id="ptn_open" layoutX="297.0" layoutY="36.0" mnemonicParsing="false" onAction="#openButton" prefHeight="25.0" prefWidth="303.0" styleClass="home" stylesheets="@css/project.css" text=" Click to see our Pet House ! " textFill="#fff9f9">
          <font>
             <Font name="Times New Roman Bold" size="20.0" />

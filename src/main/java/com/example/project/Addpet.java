@@ -6,19 +6,18 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class Adddemployee {
+public class Addpet {
     @FXML
-    public AnchorPane adddemployee;
-
+    public AnchorPane adddpet;
 
     public void goToLogin1() throws IOException {
-        AnchorPane root= FXMLLoader.load(getClass().getResource("add_employee.fxml"));
-        adddemployee.getChildren().setAll(root);
+        AnchorPane root= FXMLLoader.load(getClass().getResource("Pet.fxml"));
+        adddpet.getChildren().setAll(root);
     }
 
     public void goTomenu() throws IOException {
         AnchorPane root= FXMLLoader.load(getClass().getResource("menu.fxml"));
-        adddemployee.getChildren().setAll(root);
+        adddpet.getChildren().setAll(root);
     }
 
 }

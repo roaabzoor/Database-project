@@ -3,10 +3,12 @@ package com.example.project;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.layout.AnchorPane;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
@@ -68,6 +70,16 @@ public class Menu implements Initializable {
 
             // Set the media player to the media view
             mv.setMediaPlayer(mediaPlayer);
+        // Set the size of the MediaView (change these to desired width/height)
+        mv.setFitWidth(1000);  // Set your desired width
+        mv.setFitHeight(380); // Set your desired height
+
+        // Maintain aspect ratio
+        mv.setPreserveRatio(true);
+
+        // StackPane to hold the MediaView and set alignment to center
+        StackPane root = new StackPane();
+        root.setAlignment(Pos.CENTER);  // Ensures video is centered
 
     }
     public void openButton() {

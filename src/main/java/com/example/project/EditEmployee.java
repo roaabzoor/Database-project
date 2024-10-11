@@ -7,7 +7,7 @@ import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 
 public class EditEmployee {
-//editemployee
+
 
     @FXML
     public AnchorPane editemployee;
