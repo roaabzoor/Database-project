@@ -57,7 +57,7 @@ public class Menu implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        String resourcePath = "/com/example/project/vid/the final video.mp4";
+        String resourcePath = "/com/example/project/vid/vedio.mp4";
 
         URL resourceUrl = getClass().getResource(resourcePath);
 
