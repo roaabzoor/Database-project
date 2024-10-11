@@ -9,8 +9,8 @@ import java.io.IOException;
 public class AddAdopter {
     @FXML
     public AnchorPane adopter;
-    public void gotologin() throws IOException {
-        AnchorPane root = FXMLLoader.load(getClass().getResource("login.fxml"));
+    public void gotomenu() throws IOException {
+        AnchorPane root = FXMLLoader.load(getClass().getResource("menu.fxml"));
         adopter.getChildren().setAll(root);
 
     }

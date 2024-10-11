@@ -18,7 +18,7 @@
                   <Font name="Times New Roman Bold" size="24.0" />
                </font>
             </Label>
-            <ImageView fx:id="bck" fitHeight="32.0" fitWidth="39.0" layoutX="5.0" layoutY="4.0" onMouseClicked="#gotologin" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="bck" fitHeight="32.0" fitWidth="39.0" layoutX="5.0" layoutY="4.0" onMouseClicked="#gotomenu" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@image/back-button.png" />
                </image>
