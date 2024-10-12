@@ -28,48 +28,53 @@
           <TableColumn prefWidth="75.0" text="C2" />
         </columns>
       </TableView>
-      <JFXButton layoutX="369.0" layoutY="284.0" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Search " textFill="LINEN">
+      <JFXButton layoutX="368.0" layoutY="272.0" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Search " textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </JFXButton>
-      <Label layoutX="361.0" layoutY="170.0" prefHeight="44.0" prefWidth="130.0" text="Veterinarian ID" textFill="#391c00">
+      <Label layoutX="360.0" layoutY="162.0" prefHeight="44.0" prefWidth="130.0" text="Veterinarian ID" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="503.0" layoutY="127.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
-      <Label layoutX="364.0" layoutY="225.0" prefHeight="35.0" prefWidth="99.0" text="Pet ID" textFill="#391c00">
+      <JFXTextField layoutX="503.0" layoutY="122.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
+      <Label layoutX="363.0" layoutY="207.0" prefHeight="35.0" prefWidth="99.0" text="Pet ID" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="503.0" layoutY="174.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
-      <JFXTextField layoutX="503.0" layoutY="225.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
-      <Label layoutX="354.0" layoutY="127.0" prefHeight="44.0" prefWidth="143.0" text="MedicalRecordID" textFill="#391c00">
+      <JFXTextField layoutX="503.0" layoutY="166.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
+      <JFXTextField layoutX="503.0" layoutY="207.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
+      <Label layoutX="354.0" layoutY="118.0" prefHeight="44.0" prefWidth="143.0" text="MedicalRecordID" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="360.0" layoutY="83.0" prefHeight="35.0" prefWidth="106.0" styleClass="LOGIN" stylesheets="@css/project.css" text=" Search by" textFill="LINEN">
+      <Label layoutX="360.0" layoutY="74.0" prefHeight="35.0" prefWidth="106.0" styleClass="LOGIN" stylesheets="@css/project.css" text=" Search by" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Label>
-      <JFXButton layoutX="524.0" layoutY="284.0" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Delete" textFill="LINEN">
+      <JFXButton layoutX="524.0" layoutY="272.0" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Delete" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="369.0" layoutY="340.0" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="View all" textFill="LINEN">
+      <JFXButton layoutX="367.0" layoutY="323.0" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="View all" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="524.0" layoutY="340.0" onAction="#goTomenu" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Cancel" textFill="LINEN">
+      <JFXButton layoutX="524.0" layoutY="323.0" onAction="#goTomenu" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Cancel" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </JFXButton>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="497.0" layoutY="359.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/searcmed.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

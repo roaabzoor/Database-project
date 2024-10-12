@@ -63,16 +63,12 @@ public class Menu implements Initializable {
 
         URL resourceUrl = getClass().getResource(resourcePath);
 
-
-            // Convert the resource URL to a string and create the Media object
             Media media = new Media(resourceUrl.toExternalForm());
             mediaPlayer = new MediaPlayer(media);
 
-            // Set the media player to the media view
             mv.setMediaPlayer(mediaPlayer);
-        // Set the size of the MediaView (change these to desired width/height)
-        mv.setFitWidth(1000);  // Set your desired width
-        mv.setFitHeight(380); // Set your desired height
+        mv.setFitWidth(1000);
+        mv.setFitHeight(380);
 
         // Maintain aspect ratio
         mv.setPreserveRatio(true);
