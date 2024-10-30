@@ -50,3 +50,9 @@
 .supply{
     -fx-background-color: rgba(57, 28, 0);
 }
+.fname {
+    -fx-text-fill: #281301;
+}
+.userpass {
+    -fx-text-fill: #FAF0E6;
+}

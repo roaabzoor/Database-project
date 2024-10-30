@@ -32,22 +32,12 @@
                         <Font name="Times New Roman Bold" size="17.0" />
                      </font>
                   </Button>
-                  <Button fx:id="emplyeebtn" alignment="CENTER" lineSpacing="40.0" mnemonicParsing="false" onAction="#goToLogin1" prefHeight="30.0" prefWidth="177.0" styleClass="home" text="Employee" textFill="LINEN">
-                     <font>
-                        <Font name="Times New Roman Bold" size="17.0" />
-                     </font>
-                  </Button>
                   <Button alignment="CENTER" mnemonicParsing="false" onAction="#gotoaddadpter" prefHeight="30.0" prefWidth="177.0" styleClass="home" text="Adopter" textFill="LINEN">
                      <font>
                         <Font name="Times New Roman Bold" size="17.0" />
                      </font>
                   </Button>
                   <Button alignment="CENTER" lineSpacing="40.0" mnemonicParsing="false" onAction="#goTopet" prefHeight="30.0" prefWidth="177.0" styleClass="home" text="Pets" textFill="LINEN">
-                     <font>
-                        <Font name="Times New Roman Bold" size="17.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="veterinarinbtn" alignment="CENTER" layoutX="22.0" layoutY="198.0" lineSpacing="40.0" mnemonicParsing="false" onAction="#goToVeterinarian" prefHeight="30.0" prefWidth="177.0" styleClass="home" text="Veterinarian" textFill="LINEN">
                      <font>
                         <Font name="Times New Roman Bold" size="17.0" />
                      </font>
@@ -62,21 +52,34 @@
                         <Font name="Times New Roman Bold" size="17.0" />
                      </font>
                   </Button>
+                  <Button fx:id="emplyeebtn" alignment="CENTER" lineSpacing="40.0" mnemonicParsing="false" onAction="#goToLogin1" prefHeight="30.0" prefWidth="177.0" styleClass="home" text="Employee" textFill="LINEN">
+                     <font>
+                        <Font name="Times New Roman Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="veterinarinbtn" alignment="CENTER" layoutX="22.0" layoutY="198.0" lineSpacing="40.0" mnemonicParsing="false" onAction="#goToVeterinarian" prefHeight="30.0" prefWidth="177.0" styleClass="home" text="Veterinarian" textFill="LINEN">
+                     <font>
+                        <Font name="Times New Roman Bold" size="17.0" />
+                     </font>
+                  </Button>
                </children>
             </VBox>
          </children>
       </Pane>
-      <MediaView fx:id="mv" fitHeight="250.0" fitWidth="300.0" layoutX="332.0" layoutY="110.0" />
+      <MediaView fx:id="mv" fitHeight="250.0" fitWidth="300.0" layoutX="334.0" layoutY="61.0" />
       <Button fx:id="ptn_open" layoutX="581.0" layoutY="404.0" mnemonicParsing="false" onAction="#openButton" prefHeight="32.0" prefWidth="96.0" styleClass="home" stylesheets="@css/project.css" text=" Click ! " textFill="#fff9f9">
          <font>
             <Font name="Times New Roman Bold" size="20.0" />
          </font>
       </Button>
-      <Label layoutX="217.0" layoutY="14.0" prefHeight="32.0" prefWidth="218.0" text="     Welcome to our Pet House , " textFill="#2f1701">
+      <Label layoutX="217.0" layoutY="14.0" prefHeight="32.0" prefWidth="267.0" text="     Welcome to our Pet House , " textFill="#2f1701">
          <font>
-            <Font name="Times New Roman Bold" size="16.0" />
+            <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="firstname" layoutX="435.0" layoutY="18.0" unFocusColor="LINEN" />
+      <JFXTextField fx:id="firstname" focusColor="#281301" layoutX="455.0" layoutY="14.0" styleClass="fname" unFocusColor="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font></JFXTextField>
    </children>
 </AnchorPane>

@@ -64,11 +64,11 @@ public class Menu implements Initializable {
         firstname.setText(firstName);
 
     }
-    public void hideButtons() {
-        emplyeebtn.setVisible(false);
-        veterinarinbtn.setVisible(false);
-    }
 
+    public void setButtonVisibility(boolean isVisible) {
+        emplyeebtn.setVisible(isVisible);
+        veterinarinbtn.setVisible(isVisible);
+    }
     public MediaView mv=new MediaView();
 
     MediaPlayer mediaPlayer;
