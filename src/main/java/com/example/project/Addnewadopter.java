@@ -5,10 +5,22 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class Addnewadopter {
     @FXML
     public AnchorPane addnew ;
+
+
+
+    public void saveemployee() throws IOException, SQLException {
+
+
+
+
+
+    }
+
     public void gotomenu() throws IOException {
         AnchorPane root = FXMLLoader.load(getClass().getResource("menu.fxml"));
         addnew.getChildren().setAll(root);
