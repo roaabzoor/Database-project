@@ -10,7 +10,6 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="addVeterinarian" prefHeight="450.0" prefWidth="693.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.AddVeterinarian">
    <children>
       <HBox layoutY="253.0" prefHeight="197.0" prefWidth="700.0">
@@ -54,50 +53,44 @@
             <Font name="Times New Roman Bold" size="20.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="18.0" layoutY="89.0" styleClass="textadopter" />
+      <JFXTextField fx:id="fname" layoutX="18.0" layoutY="89.0" styleClass="textadopter" />
       <Label layoutX="184.0" layoutY="58.0" prefHeight="25.0" prefWidth="143.0" text="    Last Name" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="22.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="188.0" layoutY="89.0" styleClass="textadopter" />
-      <Label layoutX="5.0" layoutY="140.0" prefHeight="25.0" prefWidth="175.0" text="   Specialization" textFill="#391c00">
+      <JFXTextField fx:id="lname" layoutX="188.0" layoutY="89.0" styleClass="textadopter" />
+      <Label layoutX="66.0" layoutY="140.0" prefHeight="25.0" prefWidth="175.0" text="   Specialization" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="22.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="19.0" layoutY="173.0" styleClass="textadopter" />
-      <Label layoutX="184.0" layoutY="140.0" prefHeight="25.0" prefWidth="143.0" text="       Salary" textFill="#391c00">
+      <JFXTextField fx:id="specialization" layoutX="86.0" layoutY="173.0" styleClass="textadopter" />
+      <Label layoutX="266.0" layoutY="140.0" prefHeight="25.0" prefWidth="143.0" text="       Salary" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="22.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="188.0" layoutY="173.0" styleClass="textadopter" />
+      <JFXTextField fx:id="salary" layoutX="270.0" layoutY="173.0" styleClass="textadopter" />
       <Label layoutX="367.0" layoutY="58.0" prefHeight="25.0" prefWidth="156.0" text=" Phone Number " textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="22.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="378.0" layoutY="89.0" styleClass="textadopter" />
-      <Label layoutX="374.0" layoutY="140.0" prefHeight="25.0" prefWidth="143.0" text="       Eamil" textFill="#391c00">
+      <JFXTextField fx:id="phonenum" layoutX="378.0" layoutY="89.0" styleClass="textadopter" />
+      <Label layoutX="466.0" layoutY="140.0" prefHeight="25.0" prefWidth="143.0" text="       Eamil" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="22.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="378.0" layoutY="173.0" styleClass="textadopter" />
+      <JFXTextField fx:id="eamil" layoutX="470.0" layoutY="173.0" styleClass="textadopter" />
       <Label layoutX="544.0" layoutY="58.0" prefHeight="25.0" prefWidth="143.0" text="     Address" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="22.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="548.0" layoutY="89.0" styleClass="textadopter" />
-      <Label layoutX="544.0" layoutY="140.0" prefHeight="25.0" prefWidth="143.0" text="       Pet ID" textFill="#391c00">
-         <font>
-            <Font name="Times New Roman Bold" size="22.0" />
-         </font>
-      </Label>
-      <JFXTextField layoutX="548.0" layoutY="173.0" styleClass="textadopter" />
-      <Button layoutX="124.0" layoutY="209.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="98.0" styleClass="home" text="Save" textFill="LINEN">
+      <JFXTextField fx:id="address" layoutX="548.0" layoutY="89.0" styleClass="textadopter" />
+      <Button layoutX="124.0" layoutY="209.0" mnemonicParsing="false" onAction="#saveVeterinarian" prefHeight="33.0" prefWidth="98.0" styleClass="home" text="Save" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="19.0" />
          </font>

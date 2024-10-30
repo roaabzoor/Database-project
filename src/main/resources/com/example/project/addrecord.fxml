@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="addrecord" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Addrecord">
+<AnchorPane fx:id="addrecord" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Addrecord">
    <children>
       <Label layoutX="258.0" layoutY="14.0" prefHeight="44.0" prefWidth="429.0" styleClass="textadopter" stylesheets="@css/project.css" text=" Add new medical record." textFill="LINEN">
          <font>
@@ -32,26 +32,26 @@
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="277.0" layoutY="207.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
+      <JFXTextField fx:id="treatment" layoutX="277.0" layoutY="207.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
       <Label layoutX="478.0" layoutY="158.0" prefHeight="50.0" prefWidth="150.0" text="Vaccinationstatus" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="482.0" layoutY="207.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
+      <JFXTextField fx:id="vaccinationstatus" layoutX="482.0" layoutY="207.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
       <Label layoutX="278.0" layoutY="250.0" prefHeight="44.0" prefWidth="114.0" text="Dosage" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="277.0" layoutY="294.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
+      <JFXTextField fx:id="dosage" layoutX="277.0" layoutY="294.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
       <Label layoutX="488.0" layoutY="250.0" prefHeight="50.0" prefWidth="99.0" text="Diagnosis" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="482.0" layoutY="294.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
-      <JFXButton layoutX="278.0" layoutY="361.0" prefHeight="44.0" prefWidth="143.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Save" textFill="LINEN">
+      <JFXTextField fx:id="diagnosis" layoutX="482.0" layoutY="294.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
+      <JFXButton layoutX="278.0" layoutY="361.0" onAction="#saverecord" prefHeight="44.0" prefWidth="143.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Save" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
@@ -71,7 +71,7 @@
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="278.0" layoutY="123.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
-      <JFXTextField layoutX="482.0" layoutY="123.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
+      <JFXTextField fx:id="veteid" layoutX="278.0" layoutY="123.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
+      <JFXTextField fx:id="petid" layoutX="482.0" layoutY="123.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
    </children>
 </AnchorPane>
