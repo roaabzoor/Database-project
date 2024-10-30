@@ -12,6 +12,7 @@ module com.example.project {
     requires com.almasb.fxgl.all;
     requires com.jfoenix;
     requires java.desktop;
+    requires java.sql;
 
 
     opens com.example.project to javafx.fxml;

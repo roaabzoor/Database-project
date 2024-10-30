@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<HBox fx:id="box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="138.0" prefWidth="250.0" styleClass="adddemployee" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Card">
+   <children>
+
+      <VBox prefHeight="138.0" prefWidth="126.0" spacing="25.0">
+         <children>
+            <Label fx:id="catname" prefHeight="79.0" prefWidth="126.0" text="      losi " textFill="#fff3f3">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="catage" prefHeight="44.0" prefWidth="121.0" text="    4 years" textFill="#eee4e4">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="catbreed" prefHeight="51.0" prefWidth="125.0" text="     Taygor" textFill="#f2dcdc">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</HBox>

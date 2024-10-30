@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
@@ -13,7 +14,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="adddemployee" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Adddemployee">
+<AnchorPane fx:id="adddemployee" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Adddemployee">
    <children>
       <HBox prefHeight="450.0" prefWidth="700.0">
          <children>
@@ -41,95 +42,95 @@
                   <Font name="David Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="51.0" layoutY="80.0" prefHeight="17.0" prefWidth="98.0" text="First Name" textFill="LINEN">
+            <Label layoutX="63.0" layoutY="103.0" prefHeight="17.0" prefWidth="98.0" text="First Name" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="20.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="33.0" layoutY="111.0" styleClass="textemployee" />
-            <Label layoutX="523.0" layoutY="80.0" prefHeight="23.0" prefWidth="127.0" text="   Last Name" textAlignment="CENTER" textFill="LINEN">
+            <JFXTextField layoutX="45.0" layoutY="137.0" styleClass="textemployee" />
+            <Label layoutX="280.0" layoutY="103.0" prefHeight="23.0" prefWidth="127.0" text="   Last Name" textAlignment="CENTER" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="20.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="519.0" layoutY="111.0" styleClass="textemployee" />
-            <Label layoutX="279.0" layoutY="80.0" prefHeight="23.0" prefWidth="127.0" text="Gender : " textFill="LINEN">
+            <JFXTextField layoutX="518.0" layoutY="137.0" styleClass="textemployee" />
+            <Label layoutX="276.0" layoutY="182.0" prefHeight="23.0" prefWidth="127.0" text="Gender : " textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="51.0" layoutY="166.0" prefHeight="17.0" prefWidth="98.0" text="     Role" textFill="LINEN">
+            <Label layoutX="37.0" layoutY="282.0" prefHeight="23.0" prefWidth="150.0" text="     Jop Position" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="20.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="33.0" layoutY="200.0" styleClass="textemployee" />
-            <Label layoutX="294.0" layoutY="166.0" prefHeight="17.0" prefWidth="98.0" text="    Salary" textFill="LINEN">
+            <JFXTextField layoutX="276.0" layoutY="137.0" styleClass="textemployee" />
+            <Label layoutX="538.0" layoutY="201.0" prefHeight="17.0" prefWidth="98.0" text="    Eamil" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="20.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="283.0" layoutY="200.0" styleClass="textemployee" />
-            <Label layoutX="537.0" layoutY="166.0" prefHeight="17.0" prefWidth="98.0" text="    Eamil" textFill="LINEN">
+            <JFXTextField layoutX="517.0" layoutY="236.0" styleClass="textemployee" />
+            <Label layoutX="45.0" layoutY="201.0" prefHeight="23.0" prefWidth="135.0" text=" Phone Number" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="20.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="519.0" layoutY="200.0" styleClass="textemployee" />
-            <Label layoutX="33.0" layoutY="260.0" prefHeight="23.0" prefWidth="135.0" text=" Phone Number" textFill="LINEN">
+            <JFXTextField layoutX="45.0" layoutY="236.0" styleClass="textemployee" />
+            <Label layoutX="523.0" layoutY="282.0" prefHeight="23.0" prefWidth="127.0" text="  Arrival Date" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="20.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="33.0" layoutY="292.0" styleClass="textemployee" />
-            <Label layoutX="279.0" layoutY="260.0" prefHeight="23.0" prefWidth="127.0" text="  Arrival Date" textFill="LINEN">
+            <Label layoutX="294.0" layoutY="282.0" prefHeight="17.0" prefWidth="98.0" text="  Password" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="527.0" layoutY="260.0" prefHeight="17.0" prefWidth="98.0" text="  Password" textFill="LINEN">
-               <font>
-                  <Font name="Times New Roman Bold" size="20.0" />
-               </font>
-            </Label>
-            <JFXTextField layoutX="519.0" layoutY="292.0" styleClass="textemployee" />
-            <Button layoutX="300.0" layoutY="348.0" mnemonicParsing="false" onAction="#goToLogin1" prefHeight="38.0" prefWidth="112.0" styleClass="home" text=" Back " textFill="LINEN">
+            <JFXTextField layoutX="276.0" layoutY="318.0" styleClass="textemployee" />
+            <Button layoutX="294.0" layoutY="374.0" mnemonicParsing="false" onAction="#goToLogin1" prefHeight="38.0" prefWidth="112.0" styleClass="home" text=" Back " textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="21.0" />
                </font>
             </Button>
-            <Button layoutX="56.0" layoutY="355.0" mnemonicParsing="false" onAction="#goToLogin1" prefHeight="38.0" prefWidth="112.0" styleClass="home" text="Save" textFill="LINEN">
+            <Button layoutX="56.0" layoutY="374.0" mnemonicParsing="false" onAction="#goToLogin1" prefHeight="38.0" prefWidth="112.0" styleClass="home" text="Save" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="21.0" />
                </font>
             </Button>
-            <Button layoutX="523.0" layoutY="348.0" mnemonicParsing="false" onAction="#goTomenu" prefHeight="38.0" prefWidth="112.0" styleClass="home" text="Cancel" textFill="LINEN">
+            <Button layoutX="529.0" layoutY="374.0" mnemonicParsing="false" onAction="#goTomenu" prefHeight="38.0" prefWidth="112.0" styleClass="home" text="Cancel" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="21.0" />
                </font>
             </Button>
             <Line endX="64.0" layoutX="361.0" layoutY="43.0" startX="-100.0" stroke="#281401" />
-            <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="406.0" layoutY="72.0">
+            <ImageView fitHeight="38.0" fitWidth="33.0" layoutX="389.0" layoutY="175.0">
                <image>
                   <Image url="@image/girl.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="39.0" fitWidth="39.0" layoutX="406.0" layoutY="125.0">
+            <ImageView fitHeight="38.0" fitWidth="33.0" layoutX="389.0" layoutY="219.0">
                <image>
                   <Image url="@image/boy.jpg" />
                </image>
             </ImageView>
-            <RadioButton layoutX="372.0" layoutY="135.0" mnemonicParsing="false" textFill="LINEN">
+            <RadioButton layoutX="357.0" layoutY="228.0" mnemonicParsing="false" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="15.0" />
                </font>
             </RadioButton>
-            <RadioButton layoutX="372.0" layoutY="81.0" mnemonicParsing="false" textFill="LINEN">
+            <RadioButton layoutX="357.0" layoutY="183.0" mnemonicParsing="false" textFill="LINEN">
                <font>
                   <Font size="15.0" />
                </font>
             </RadioButton>
-            <DatePicker layoutX="256.0" layoutY="292.0" styleClass="textemployee" />
+            <DatePicker layoutX="498.0" layoutY="318.0" />
+            <ComboBox layoutX="37.0" layoutY="318.0" prefWidth="150.0" />
+            <Label layoutX="536.0" layoutY="103.0" prefHeight="17.0" prefWidth="98.0" text="    Salary" textFill="LINEN">
+               <font>
+                  <Font name="Times New Roman Bold" size="20.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>

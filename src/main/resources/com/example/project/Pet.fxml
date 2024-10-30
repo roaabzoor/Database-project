@@ -28,7 +28,7 @@
       </ImageView>
       <Pane prefHeight="451.0" prefWidth="700.0" styleClass="adddemployee">
          <children>
-            <Button layoutX="228.0" layoutY="179.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="244.0" styleClass="home" text="View Pet" textFill="LINEN">
+            <Button layoutX="228.0" layoutY="179.0" mnemonicParsing="false" onAction="#goToviewpet" prefHeight="47.0" prefWidth="244.0" styleClass="home" text="View Pet" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="22.0" />
                </font>

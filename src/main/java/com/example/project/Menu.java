@@ -1,5 +1,6 @@
 package com.example.project;
 
+import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -24,6 +25,12 @@ public class Menu implements Initializable {
 
     @FXML
     public AnchorPane menu;
+    @FXML
+    private JFXTextField firstname;
+    @FXML
+    private Button emplyeebtn;
+    @FXML
+    private Button veterinarinbtn;
     public void goToLogin() throws IOException {
         AnchorPane root= FXMLLoader.load(getClass().getResource("login.fxml"));
         menu.getChildren().setAll(root);
@@ -53,8 +60,17 @@ public class Menu implements Initializable {
         AnchorPane root = FXMLLoader.load(getClass().getResource("Supplies.fxml"));
         menu.getChildren().setAll(root);
     }
+    public void setfirstname(String firstName) {
+        firstname.setText(firstName);
+
+    }
+    public void hideButtons() {
+        emplyeebtn.setVisible(false);
+        veterinarinbtn.setVisible(false);
+    }
+
     public MediaView mv=new MediaView();
-    public Button btnOpen;
+
     MediaPlayer mediaPlayer;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)

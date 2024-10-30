@@ -1,6 +1,7 @@
 package com.example.project;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -23,11 +24,10 @@ public class Pet {
         AnchorPane root= FXMLLoader.load(getClass().getResource("searchpet.fxml"));
         pet.getChildren().setAll(root);
     }
-   /*
-    }
-
     public void goToviewpet() throws IOException {
-        AnchorPane root= FXMLLoader.load(getClass().getResource("editVeterinarian.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("viewpet.fxml"));
         pet.getChildren().setAll(root);
-    }*/
+
+}
+
 }
