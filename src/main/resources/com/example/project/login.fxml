@@ -4,6 +4,7 @@
 <?import com.jfoenix.controls.JFXCheckBox?>
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -47,7 +48,11 @@
                   </Hyperlink>
                   <Pane layoutX="20.0" layoutY="116.0" prefHeight="36.0" prefWidth="200.0" styleClass="text1" stylesheets="@css/project.css">
                      <children>
-                        <JFXTextField fx:id="username" focusColor="WHITE" layoutX="39.0" layoutY="5.0" prefHeight="26.0" prefWidth="154.0" promptText="User Name" styleClass="text2" stylesheets="@css/project.css" />
+                        <JFXTextField fx:id="username" focusColor="WHITE" layoutX="39.0" layoutY="5.0" prefHeight="26.0" prefWidth="154.0" promptText="User Name" stylesheets="@css/project.css">
+                           <styleClass>
+                              <String fx:value="text2" />
+                              <String fx:value="userpass" />
+                           </styleClass></JFXTextField>
                         <ImageView fitHeight="26.0" fitWidth="33.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@image/user.png" />
@@ -62,8 +67,12 @@
                               <Image url="@image/padlock.png" />
                            </image>
                         </ImageView>
-                        <JFXTextField fx:id="loginshow" layoutX="33.0" layoutY="8.0" prefHeight="25.0" prefWidth="148.0" />
-                        <JFXPasswordField fx:id="login_pass" focusColor="WHITE" layoutX="33.0" layoutY="7.0" prefHeight="25.0" prefWidth="154.0" promptText=" Password" styleClass="text2" stylesheets="@css/project.css" />
+                        <JFXTextField fx:id="loginshow" layoutX="33.0" layoutY="8.0" prefHeight="25.0" prefWidth="148.0" styleClass="userpass" />
+                        <JFXPasswordField fx:id="login_pass" focusColor="WHITE" layoutX="33.0" layoutY="7.0" prefHeight="25.0" prefWidth="154.0" promptText=" Password" stylesheets="@css/project.css">
+                           <styleClass>
+                              <String fx:value="text2" />
+                              <String fx:value="userpass" />
+                           </styleClass></JFXPasswordField>
                      </children>
                   </Pane>
                   <JFXCheckBox fx:id="checkbox" layoutX="14.0" layoutY="205.0" onAction="#togglePass" prefHeight="18.0" prefWidth="116.0" text="show password" />
