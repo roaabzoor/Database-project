@@ -37,19 +37,19 @@
                      </font>
                   </Label>
                   <Line endX="123.00003051757812" endY="-40.40000915527344" layoutX="101.0" layoutY="121.0" startX="-50.00000762939453" startY="-40.40000915527344" stroke="#391c00" />
-                  <JFXTextField alignment="CENTER" layoutX="174.0" layoutY="140.0" prefHeight="28.0" prefWidth="152.0" styleClass="textemployee" stylesheets="@css/project.css" />
+                  <JFXTextField fx:id="firstname" layoutX="174.0" layoutY="140.0" prefHeight="28.0" prefWidth="152.0" styleClass="textemployee" stylesheets="@css/project.css" />
                   <Label layoutX="25.0" layoutY="129.0" prefHeight="50.0" prefWidth="129.0" text="First Name:" textFill="LINEN">
                      <font>
                         <Font name="Times New Roman Bold" size="23.0" />
                      </font>
                   </Label>
-                  <JFXTextField layoutX="174.0" layoutY="193.0" prefHeight="28.0" prefWidth="152.0" styleClass="textemployee" stylesheets="@css/project.css" />
+                  <JFXTextField fx:id="lastname" layoutX="174.0" layoutY="193.0" prefHeight="28.0" prefWidth="152.0" styleClass="textemployee" stylesheets="@css/project.css" />
                   <Label layoutX="25.0" layoutY="175.0" prefHeight="50.0" prefWidth="114.0" text="Last Name:" textFill="LINEN">
                      <font>
                         <Font name="Times New Roman Bold" size="23.0" />
                      </font>
                   </Label>
-                  <JFXTextField layoutX="174.0" layoutY="257.0" prefHeight="28.0" prefWidth="152.0" styleClass="textemployee" stylesheets="@css/project.css" />
+                  <JFXTextField fx:id="age" layoutX="174.0" layoutY="257.0" prefHeight="28.0" prefWidth="152.0" styleClass="textemployee" stylesheets="@css/project.css" />
                   <Label layoutX="376.0" layoutY="125.0" prefHeight="50.0" prefWidth="114.0" text="Address:" textFill="LINEN">
                      <font>
                         <Font name="Times New Roman Bold" size="23.0" />
@@ -65,10 +65,10 @@
                         <Font name="Times New Roman Bold" size="26.0" />
                      </font>
                   </Label>
-                  <JFXTextField layoutX="505.0" layoutY="140.0" prefHeight="28.0" prefWidth="152.0" styleClass="textemployee" stylesheets="@css/project.css" />
-                  <JFXTextField layoutX="505.0" layoutY="193.0" prefHeight="28.0" prefWidth="152.0" styleClass="textemployee" stylesheets="@css/project.css" />
-                  <JFXTextField layoutX="505.0" layoutY="254.0" prefHeight="28.0" prefWidth="152.0" styleClass="textemployee" stylesheets="@css/project.css" />
-                  <JFXButton layoutX="75.0" layoutY="347.0" prefHeight="57.0" prefWidth="142.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Save" textFill="LINEN">
+                  <JFXTextField fx:id="address" layoutX="505.0" layoutY="140.0" prefHeight="28.0" prefWidth="152.0" styleClass="textemployee" stylesheets="@css/project.css" />
+                  <JFXTextField fx:id="phonenumber" layoutX="505.0" layoutY="193.0" prefHeight="28.0" prefWidth="152.0" styleClass="textemployee" stylesheets="@css/project.css" />
+                  <JFXTextField fx:id="email" layoutX="505.0" layoutY="254.0" prefHeight="28.0" prefWidth="152.0" styleClass="textemployee" stylesheets="@css/project.css" />
+                  <JFXButton layoutX="75.0" layoutY="347.0" onAction="#saveemployee" prefHeight="57.0" prefWidth="142.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Save" textFill="LINEN">
                      <font>
                         <Font name="Times New Roman Bold" size="25.0" />
                      </font>

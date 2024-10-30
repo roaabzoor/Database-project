@@ -42,16 +42,16 @@
             <Font name="Times New Roman Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="198.0" layoutY="129.0" prefHeight="36.0" prefWidth="142.0" text="SupplierName:" textFill="#391c00">
+      <Label layoutX="198.0" layoutY="129.0" prefHeight="36.0" prefWidth="142.0" text="Supplier ID:" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="20.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="341.0" layoutY="134.0" styleClass="textemployee" />
-      <JFXTextField layoutX="341.0" layoutY="184.0" styleClass="textemployee" />
-      <JFXTextField layoutX="341.0" layoutY="227.0" styleClass="textemployee" />
-      <JFXTextField layoutX="340.0" layoutY="272.0" styleClass="textemployee" />
-      <JFXButton layoutX="201.0" layoutY="347.0" prefHeight="46.0" prefWidth="135.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Save" textFill="LINEN">
+      <JFXTextField fx:id="supplierid" layoutX="341.0" layoutY="134.0" styleClass="textemployee" />
+      <JFXTextField fx:id="supplyname" layoutX="341.0" layoutY="184.0" styleClass="textemployee" />
+      <JFXTextField fx:id="quantity" layoutX="341.0" layoutY="227.0" styleClass="textemployee" />
+      <JFXTextField fx:id="total" layoutX="340.0" layoutY="272.0" styleClass="textemployee" />
+      <JFXButton layoutX="201.0" layoutY="347.0" onAction="#savesupply" prefHeight="46.0" prefWidth="135.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Save" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="23.0" />
          </font>
