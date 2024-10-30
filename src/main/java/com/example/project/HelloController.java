@@ -16,76 +16,87 @@ import java.awt.desktop.UserSessionEvent;
 import java.io.IOException;
 import java.sql.*;
 
-public class HelloController  extends database{
-@FXML
-public AnchorPane loginpane ;
+public class HelloController  {
+    @FXML
+    public AnchorPane loginpane;
     @FXML
     private JFXCheckBox checkbox;
     @FXML
     private JFXPasswordField login_pass;
+
     @FXML
     private JFXTextField username;
     @FXML
     private JFXTextField loginshow;
-    Connection conn;
-    Statement stmt;
-    ResultSet rs;
-
-    public boolean isShown=false;
     String namee ;
+    @FXML
+    private Button emplyeebtn;
+    @FXML
+    private Button veterinarinbtn;
+    public void gotomenu() throws IOException {
 
-    public void gotomenu() throws IOException, SQLException {
-        try {
-            // Establishing a database connection
-            conn = DriverManager.getConnection(url, user, password);
+        Connection conn = null;
+        Statement stmt = null;
+        ResultSet rs = null;
+
+        try  {
+            database b=new database();
+            conn = DriverManager.getConnection(b.url,b.user,b.password  );
+            System.out.println(conn.isClosed());
+            if(conn!=null){
+                System.out.println("here");
+            }
             stmt = conn.createStatement();
-            String sql = "SELECT * FROM public.employee";
+            String sql = "SELECT * FROM employee";
             rs = stmt.executeQuery(sql);
-
-            boolean userFound = false;  // Flag to check if user is found
-
+            boolean userFound = false;
 
             while (rs.next()) {
-                // Check if email matches
-                if (rs.getString("email").equals(username.getText())) {
-                    // Check if password matches
-                    if (rs.getString("password").equals(login_pass.getText())) {
-                        userFound = true;  // User authenticated successfully
-                        if (rs.getString("jopposition").equals("admin")) {
-                            // Load the menu screen
-                            FXMLLoader loader = new FXMLLoader(getClass().getResource("menu.fxml"));
-                            Parent menuRoot = loader.load();
-                            Menu homeController = loader.getController();
-                            homeController.setfirstname(rs.getString("fname"));  // Set user's first name in menu
+                if (rs.getString("email").equals(username.getText()) &&
+                        rs.getString("epassword").equals(login_pass.getText())) {
 
-                            // Change scene to the menu
-                            Stage window = (Stage) loginpane.getScene().getWindow();
-                            window.setScene(new Scene(menuRoot));
-                            window.centerOnScreen();
-                            return;  // Exit method after successful login
-                        }
+                    userFound = true;
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("menu.fxml"));
+                    Parent menuRoot = loader.load();
+                    Menu homeController = loader.getController();
+                    homeController.setfirstname(rs.getString("fname"));
+
+                    // Check if the user is an admin or not
+                    if ("admin".equals(rs.getString("jopposition"))) {
+                        homeController.setButtonVisibility(true); // Show buttons for admin
+                    } else if ("notadmin".equals(rs.getString("jopposition"))) {
+                        homeController.setButtonVisibility(false); // Hide buttons for not admin
                     }
+
+                    Stage window = (Stage) loginpane.getScene().getWindow();
+                    window.setScene(new Scene(menuRoot));
+                    window.setWidth(720);
+                    window.setHeight(490);
+                    window.centerOnScreen();
+                    return;  // Exit after successful login
                 }
+
             }
-            // Alert if user not found or credentials don't match
-            if (!userFound) {
+
+         /*   if (!userFound) {
                 Alert alert = new Alert(Alert.AlertType.ERROR, "Invalid email or password.", ButtonType.OK);
                 alert.showAndWait();
-            }
+            }*/
 
         } catch (SQLException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         } finally {
-            // Clean up database resources
-            if (rs != null) rs.close();
-            if (stmt != null) stmt.close();
-            if (conn != null) conn.close();
+            // Close database resources
+            try {
+                if (rs != null) rs.close();
+                if (stmt != null) stmt.close();
+                if (conn != null) conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
-
-   //AnchorPane root = FXMLLoader.load(getClass().getResource("menu.fxml"));
-   // loginpane.getChildren().setAll(root);
 
     public void gotoforget() throws IOException{
         AnchorPane root = FXMLLoader.load(getClass().getResource("forget.fxml"));

@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="loginpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.HelloController">
+<AnchorPane fx:id="loginpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.HelloController">
    <children>
       <Pane prefHeight="450.0" prefWidth="700.0">
          <children>
@@ -47,7 +47,7 @@
                   </Hyperlink>
                   <Pane layoutX="20.0" layoutY="116.0" prefHeight="36.0" prefWidth="200.0" styleClass="text1" stylesheets="@css/project.css">
                      <children>
-                        <JFXTextField fx:id="user" focusColor="WHITE" layoutX="39.0" layoutY="5.0" prefHeight="26.0" prefWidth="154.0" promptText="User Name" styleClass="text2" stylesheets="@css/project.css" />
+                        <JFXTextField fx:id="username" focusColor="WHITE" layoutX="39.0" layoutY="5.0" prefHeight="26.0" prefWidth="154.0" promptText="User Name" styleClass="text2" stylesheets="@css/project.css" />
                         <ImageView fitHeight="26.0" fitWidth="33.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@image/user.png" />
