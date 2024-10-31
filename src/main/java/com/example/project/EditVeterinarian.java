@@ -9,7 +9,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.sql.*;
-import java.time.LocalDate;
+
 
 public class EditVeterinarian {
 

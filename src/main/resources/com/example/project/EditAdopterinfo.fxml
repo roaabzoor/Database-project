@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="editadopterinfo" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.EditAdopterinfo">
+<AnchorPane fx:id="editadopterinfo" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.EditAdopterinfo">
    <children>
       <Pane layoutX="17.0" layoutY="14.0" prefHeight="66.0" prefWidth="670.0" styleClass="aa" stylesheets="@css/project.css">
          <children>
@@ -40,42 +40,42 @@
             <Image url="@image/Screenshot%202024-10-09%20173835.png" />
          </image>
       </ImageView>
-      <Label layoutX="342.0" layoutY="104.0" prefHeight="50.0" prefWidth="99.0" text="First Name" textFill="#391c00">
+      <Label layoutX="342.0" layoutY="79.0" prefHeight="50.0" prefWidth="99.0" text="First Name:" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="331.0" layoutY="141.0" prefHeight="25.0" prefWidth="121.0" styleClass="textadopter" stylesheets="@css/project.css" />
-      <Label layoutX="525.0" layoutY="104.0" prefHeight="50.0" prefWidth="99.0" text="Last Name:" textFill="#391c00">
+      <JFXTextField fx:id="fname3" layoutX="331.0" layoutY="123.0" prefHeight="25.0" prefWidth="121.0" styleClass="textadopter" stylesheets="@css/project.css" />
+      <Label layoutX="525.0" layoutY="79.0" prefHeight="50.0" prefWidth="99.0" text="Last Name:" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="514.0" layoutY="142.0" prefHeight="25.0" prefWidth="121.0" styleClass="textadopter" stylesheets="@css/project.css" />
-      <Label layoutX="342.0" layoutY="183.0" prefHeight="50.0" prefWidth="87.0" text="Address:" textFill="#391c00">
+      <JFXTextField fx:id="lname3" layoutX="514.0" layoutY="123.0" prefHeight="25.0" prefWidth="121.0" styleClass="textadopter" stylesheets="@css/project.css" />
+      <Label layoutX="348.0" layoutY="148.0" prefHeight="50.0" prefWidth="87.0" text="  Address:" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="325.0" layoutY="220.0" prefHeight="25.0" prefWidth="121.0" styleClass="textadopter" stylesheets="@css/project.css" />
-      <JFXTextField layoutX="514.0" layoutY="217.0" prefHeight="25.0" prefWidth="121.0" styleClass="textadopter" stylesheets="@css/project.css" />
-      <JFXTextField layoutX="418.0" layoutY="293.0" prefHeight="25.0" prefWidth="121.0" styleClass="textadopter" stylesheets="@css/project.css" />
-      <Label layoutX="525.0" layoutY="183.0" prefHeight="40.0" prefWidth="99.0" text="Phone Num:" textFill="#391c00">
+      <JFXTextField fx:id="address3" layoutX="331.0" layoutY="191.0" prefHeight="25.0" prefWidth="121.0" styleClass="textadopter" stylesheets="@css/project.css" />
+      <JFXTextField fx:id="phonenum3" layoutX="514.0" layoutY="191.0" prefHeight="25.0" prefWidth="121.0" styleClass="textadopter" stylesheets="@css/project.css" />
+      <JFXTextField fx:id="eamil3" layoutX="404.0" layoutY="259.0" prefHeight="25.0" prefWidth="167.0" styleClass="textadopter" stylesheets="@css/project.css" />
+      <Label layoutX="525.0" layoutY="153.0" prefHeight="40.0" prefWidth="99.0" text="Phone Num:" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="429.0" layoutY="255.0" prefHeight="50.0" prefWidth="99.0" text="Phone Num:" textFill="#391c00">
+      <Label layoutX="429.0" layoutY="216.0" prefHeight="50.0" prefWidth="99.0" text="      Email:" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Label>
-      <JFXButton layoutX="326.0" layoutY="360.0" prefHeight="40.0" prefWidth="130.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Update" textFill="LINEN">
+      <JFXButton layoutX="327.0" layoutY="306.0" onAction="#saveadopter" prefHeight="40.0" prefWidth="130.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Update" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="509.0" layoutY="360.0" onAction="#gotomenu" prefHeight="40.0" prefWidth="130.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Cancel" textFill="LINEN">
+      <JFXButton layoutX="510.0" layoutY="306.0" onAction="#gotomenu" prefHeight="40.0" prefWidth="130.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Cancel" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
@@ -85,5 +85,16 @@
             <Image url="@image/Screenshot%202024-10-09%20173604.png" />
          </image>
       </ImageView>
+      <Label layoutX="331.0" layoutY="363.0" prefHeight="25.0" prefWidth="143.0" text="Adopter ID :" textFill="#391c00">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="adopterid" layoutX="514.0" layoutY="363.0" prefHeight="25.0" prefWidth="121.0" styleClass="textadopter" stylesheets="@css/project.css" />
+      <JFXButton layoutX="414.0" layoutY="400.0" onAction="#loadadopter" prefHeight="40.0" prefWidth="130.0" styleClass="LOGIN" stylesheets="@css/project.css" text="search" textFill="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
