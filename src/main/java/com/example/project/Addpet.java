@@ -2,19 +2,20 @@ package com.example.project;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
+
 
 public class Addpet {
     @FXML
     public AnchorPane adddpet;
-
+    @FXML
+    public ImageView tempImage;
     public void goToLogin1() throws IOException {
         AnchorPane root = FXMLLoader.load(getClass().getResource("Pet.fxml"));
         adddpet.getChildren().setAll(root);
@@ -48,4 +49,15 @@ public class Addpet {
             e.printStackTrace();
         }
     }*/
+    public void getImageFromUser(){
+        try {
+            FileChooser filechoser = new FileChooser();
+            File f = filechoser.showOpenDialog(new Stage());
+            System.out.println(f.getPath());
+            Image i = new Image(f.getPath());
+            tempImage.setImage(i);
+        }catch(Exception e){
+            System.out.println("here");
+        }
+        }
 }

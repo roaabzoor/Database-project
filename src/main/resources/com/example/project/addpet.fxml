@@ -84,10 +84,11 @@
          </font>
       </Label>
       <JFXTextField layoutX="384.0" layoutY="268.0" styleClass="textadopter" />
-      <Label layoutX="420.0" layoutY="316.0" prefHeight="25.0" prefWidth="220.0" text="        Upload Image" textFill="#391c00">
+      <Label layoutX="420.0" layoutY="316.0" onMouseClicked="#getImageFromUser" prefHeight="25.0" prefWidth="220.0" text="        Upload Image" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="22.0" />
          </font>
       </Label>
+      <ImageView fx:id="tempImage" fitHeight="150.0" fitWidth="200.0" layoutX="86.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

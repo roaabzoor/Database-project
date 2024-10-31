@@ -9,7 +9,8 @@ import com.jfoenix.controls.JFXTextField;
 
 
 import java.io.IOException;
-import java.sql.*;public class Editsupply {
+import java.sql.*;
+public class Editsupply {
     @FXML
     public AnchorPane editsupply;
 
@@ -17,7 +18,7 @@ import java.sql.*;public class Editsupply {
     private JFXTextField quantitty;
 
     @FXML
-    private JFXTextField suppliername;
+    private JFXTextField supplierid;
 
     @FXML
     private JFXTextField supplyid;
@@ -27,7 +28,6 @@ import java.sql.*;public class Editsupply {
 
     @FXML
     private JFXTextField totalcost;
-
     // Method to load supply record from the database
     public void loadSupplyRecord() throws IOException {
         if (supplyid.getText().isEmpty()) {
@@ -56,7 +56,7 @@ import java.sql.*;public class Editsupply {
                     supplyname.setText(rs.getString("supplyname"));
                     quantitty.setText(rs.getString("quantity"));
                     totalcost.setText(rs.getString("total_cost"));
-                    suppliername.setText(rs.getString("suppliername"));
+                    supplierid.setText(rs.getString("employeeid")); // Make sure to use consistent naming
                 } else {
                     showAlert(Alert.AlertType.ERROR, "Supply record not found with the given ID.");
                 }
@@ -67,38 +67,39 @@ import java.sql.*;public class Editsupply {
         }
     }
 
-    // Method to save updated supply record to the database
     public void saveSupplyRecord() {
-        if (supplyname.getText().isEmpty() || quantitty.getText().isEmpty() || totalcost.getText().isEmpty() || suppliername.getText().isEmpty()) {
+        if (supplyname.getText().isEmpty() || quantitty.getText().isEmpty() || totalcost.getText().isEmpty() || supplierid.getText().isEmpty()) {
             showAlert(Alert.AlertType.ERROR, "All fields must be filled out.");
             return;
         }
 
         // Retrieve and parse field values
         String supplyName = supplyname.getText();
-        String quantity = quantitty.getText();
-        String supplierName = suppliername.getText();
+        String quantityText = quantitty.getText();
 
         int supplyId;
         int totalCost;
+        int supplierId;  // Parse supplierid as an integer for employeeid field
+
         try {
             supplyId = Integer.parseInt(supplyid.getText());
             totalCost = Integer.parseInt(totalcost.getText());
+            supplierId = Integer.parseInt(supplierid.getText());  // Parse as integer
         } catch (NumberFormatException e) {
-            showAlert(Alert.AlertType.ERROR, "Supply ID and Total Cost must be valid integers.");
+            showAlert(Alert.AlertType.ERROR, "Supply ID, Total Cost, and Employee ID must be valid integers.");
             return;
         }
 
         // Database connection
         database db = new database();
         try (Connection conn = DriverManager.getConnection(db.url, db.user, db.password)) {
-            String sql = "UPDATE supplies SET supplyname = ?, quantity = ?, total_cost = ?, suppliername = ? WHERE supplyid = ?";
+            String sql = "UPDATE supplies SET supplyname = ?, quantity = ?, total_cost = ?, employeeid = ? WHERE supplyid = ?";
 
             try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
                 pstmt.setString(1, supplyName);
-                pstmt.setString(2, quantity);
-                pstmt.setInt(3, totalCost);  // Use setInt for integer totalCost
-                pstmt.setString(4, supplierName);
+                pstmt.setString(2, quantityText);
+                pstmt.setInt(3, totalCost);
+                pstmt.setInt(4, supplierId);  // Set employeeid as an integer
                 pstmt.setInt(5, supplyId);
 
                 pstmt.executeUpdate();
@@ -109,6 +110,7 @@ import java.sql.*;public class Editsupply {
             showAlert(Alert.AlertType.ERROR, "Database error: " + e.getMessage());
         }
     }
+
 
     // Method to show alerts for success and error messages
     private void showAlert(Alert.AlertType alertType, String message) {
