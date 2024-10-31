@@ -40,14 +40,14 @@
                   <Font name="Times New Roman Bold" size="20.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="80.0" layoutY="97.0" styleClass="textemployee" />
+            <JFXTextField fx:id="fname2" layoutX="80.0" layoutY="97.0" styleClass="textemployee" />
             <Label layoutX="84.0" layoutY="139.0" prefHeight="23.0" prefWidth="127.0" text="   Last Name" textAlignment="CENTER" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="20.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="80.0" layoutY="170.0" styleClass="textemployee" />
-            <JFXTextField layoutX="271.0" layoutY="263.0" styleClass="textemployee" />
+            <JFXTextField fx:id="lname2" layoutX="80.0" layoutY="170.0" styleClass="textemployee" />
+            <JFXTextField fx:id="salary2" layoutX="271.0" layoutY="263.0" styleClass="textemployee" />
             <Label layoutX="289.0" layoutY="230.0" prefHeight="17.0" prefWidth="98.0" text="    Salary" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="20.0" />
@@ -58,38 +58,38 @@
                   <Font name="Times New Roman Bold" size="20.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="75.0" layoutY="303.0" styleClass="textemployee" />
+            <JFXTextField fx:id="eamil2" layoutX="75.0" layoutY="303.0" styleClass="textemployee" />
             <Label layoutX="75.0" layoutY="342.0" prefHeight="23.0" prefWidth="135.0" text=" Phone Number" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="20.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="75.0" layoutY="373.0" styleClass="textemployee" />
+            <JFXTextField fx:id="phonenum2" layoutX="75.0" layoutY="373.0" styleClass="textemployee" />
             <Label layoutX="289.0" layoutY="159.0" prefHeight="16.0" prefWidth="98.0" text="   Address" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="20.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="271.0" layoutY="190.0" styleClass="textemployee" />
+            <JFXTextField fx:id="address2" layoutX="271.0" layoutY="190.0" styleClass="textemployee" />
             <Label layoutX="250.0" layoutY="304.0" prefHeight="23.0" prefWidth="160.0" text="     Specialization" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="20.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="263.0" layoutY="341.0" styleClass="textemployee" />
-            <Button layoutX="512.0" layoutY="132.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="148.0" styleClass="home" text="Save" textFill="LINEN">
+            <JFXTextField fx:id="specialization2" layoutX="263.0" layoutY="341.0" styleClass="textemployee" />
+            <Button layoutX="506.0" layoutY="264.0" mnemonicParsing="false" onAction="#saveVeterinarian" prefHeight="44.0" prefWidth="135.0" styleClass="home" text="Update" textFill="LINEN">
                <font>
-                  <Font name="Times New Roman Bold" size="29.0" />
+                  <Font name="Times New Roman Bold" size="25.0" />
                </font>
             </Button>
-            <Button layoutX="512.0" layoutY="227.0" mnemonicParsing="false" onAction="#goToLogin1" prefHeight="53.0" prefWidth="148.0" styleClass="home" text="Back" textFill="LINEN">
+            <Button layoutX="506.0" layoutY="330.0" mnemonicParsing="false" onAction="#goToLogin1" prefHeight="44.0" prefWidth="135.0" styleClass="home" text="Back" textFill="LINEN">
                <font>
-                  <Font name="Times New Roman Bold" size="29.0" />
+                  <Font name="Times New Roman Bold" size="26.0" />
                </font>
             </Button>
-            <Button layoutX="512.0" layoutY="320.0" mnemonicParsing="false" onAction="#goTomenu" prefHeight="54.0" prefWidth="148.0" styleClass="home" text="Cancel" textFill="LINEN">
+            <Button layoutX="506.0" layoutY="398.0" mnemonicParsing="false" onAction="#goTomenu" prefHeight="44.0" prefWidth="135.0" styleClass="home" text="Cancel" textFill="LINEN">
                <font>
-                  <Font name="Times New Roman Bold" size="29.0" />
+                  <Font name="Times New Roman Bold" size="24.0" />
                </font>
             </Button>
             <ImageView fitHeight="61.0" fitWidth="83.0" layoutX="617.0" layoutY="6.0">
@@ -97,6 +97,17 @@
                   <Image url="@image/house.png" />
                </image>
             </ImageView>
+            <Label layoutX="316.0" layoutY="79.0" prefHeight="25.0" prefWidth="194.0" text="Veterinarian ID :" textFill="#391c00">
+               <font>
+                  <Font name="Times New Roman Bold" size="22.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="veterid2" layoutX="506.0" layoutY="84.0" styleClass="textadopter" />
+            <Button layoutX="506.0" layoutY="127.0" mnemonicParsing="false" onAction="#loadVeterinarian" prefHeight="16.0" prefWidth="135.0" styleClass="home" text="Search" textFill="LINEN">
+               <font>
+                  <Font name="Times New Roman Bold" size="26.0" />
+               </font>
+            </Button>
          </children></Pane>
    </children>
 </AnchorPane>
