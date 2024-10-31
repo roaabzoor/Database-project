@@ -16,10 +16,15 @@
    <children>
       <Pane prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css">
          <children>
-            <TableView layoutX="76.0" layoutY="14.0" prefHeight="236.0" prefWidth="610.0">
+            <TableView fx:id="adoptertable" layoutX="76.0" layoutY="14.0" prefHeight="236.0" prefWidth="610.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn fx:id="id" prefWidth="75.0" text="adopterid" />
+                <TableColumn fx:id="fnamecolumn" prefWidth="75.0" text="firstname" />
+                  <TableColumn fx:id="lnamecolmn" prefWidth="75.0" text="lastname" />
+                  <TableColumn fx:id="emailcoulmn" prefWidth="167.2000732421875" text="email" />
+                  <TableColumn fx:id="number" prefWidth="77.59994506835938" text="phone" />
+                  <TableColumn fx:id="addresscoulmn" prefWidth="68.7999267578125" text="address" />
+                  <TableColumn fx:id="agecolumn" prefWidth="56.800048828125" text="age" />
               </columns>
             </TableView>
             <ImageView fitHeight="33.0" fitWidth="35.0" layoutX="2.0" layoutY="2.0" onMouseClicked="#gotoaddadopter" pickOnBounds="true" preserveRatio="true">
@@ -34,17 +39,12 @@
             </ImageView>
             <Line endX="-85.99996948242188" endY="-84.0" layoutX="275.0" layoutY="342.0" startX="-270.0" startY="-84.0" />
             <Line endX="-95.99996948242188" endY="88.695068359375" layoutX="285.0" layoutY="352.0" startX="-280.0" startY="88.695068359375" />
-            <JFXButton layoutX="488.0" layoutY="277.0" prefHeight="28.0" prefWidth="121.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Search" textFill="LINEN">
+            <JFXButton layoutX="488.0" layoutY="306.0" prefHeight="28.0" prefWidth="121.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Search" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="488.0" layoutY="357.0" prefHeight="33.0" prefWidth="121.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Veiw all" textFill="LINEN">
-               <font>
-                  <Font name="Times New Roman Bold" size="18.0" />
-               </font>
-            </JFXButton>
-            <JFXButton layoutX="488.0" layoutY="316.0" prefHeight="33.0" prefWidth="121.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Delete" textFill="LINEN">
+            <JFXButton layoutX="488.0" layoutY="349.0" prefHeight="33.0" prefWidth="121.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Delete" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
@@ -56,14 +56,14 @@
                         <Font name="Times New Roman Bold" size="18.0" />
                      </font>
                   </Label>
-                  <JFXTextField layoutX="106.0" layoutY="9.0" prefHeight="25.0" prefWidth="121.0" stylesheets="@css/project.css" />
-                  <JFXTextField layoutX="102.0" layoutY="41.0" prefHeight="25.0" prefWidth="129.0" styleClass="textemployee" stylesheets="@css/project.css" />
-                  <Label layoutX="7.0" layoutY="75.0" prefHeight="50.0" prefWidth="99.0" text="Phone Num:" textFill="#391c00">
+                  <JFXTextField fx:id="adopterid" layoutX="106.0" layoutY="9.0" prefHeight="25.0" prefWidth="121.0" stylesheets="@css/project.css" />
+                  <JFXTextField fx:id="fname" layoutX="102.0" layoutY="41.0" prefHeight="25.0" prefWidth="129.0" styleClass="textemployee" stylesheets="@css/project.css" />
+                  <Label layoutX="7.0" layoutY="75.0" prefHeight="50.0" prefWidth="99.0" text="Email" textFill="#391c00">
                      <font>
                         <Font name="Times New Roman Bold" size="18.0" />
                      </font>
                   </Label>
-                  <JFXTextField layoutX="106.0" layoutY="75.0" prefHeight="31.0" prefWidth="129.0" styleClass="textemployee" stylesheets="@css/project.css" />
+                  <JFXTextField fx:id="email" layoutX="106.0" layoutY="75.0" prefHeight="31.0" prefWidth="129.0" styleClass="textemployee" stylesheets="@css/project.css" />
                   <Label layoutX="7.0" layoutY="1.0" prefHeight="50.0" prefWidth="68.0" text="ID:" textFill="#391c00">
                      <font>
                         <Font name="Times New Roman Bold" size="20.0" />

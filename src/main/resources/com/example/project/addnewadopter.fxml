@@ -88,6 +88,11 @@
                         <Font name="Times New Roman Bold" size="28.0" />
                      </font>
                   </Label>
+                  <Label fx:id="invalid" layoutX="581.0" layoutY="173.0" prefHeight="19.0" prefWidth="105.0" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
          </children>

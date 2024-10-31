@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 import java.sql.Connection;
@@ -15,6 +16,9 @@ import java.sql.SQLException;
 public class Addnewadopter {
     @FXML
     public AnchorPane addnew ;
+
+    @FXML
+    private Label invalid;
 
     @FXML
     private JFXTextField address;
@@ -51,13 +55,20 @@ public class Addnewadopter {
         String agee = age.getText();
 
         int phone;
-        try {
-            phone = Integer.parseInt(phoneStr);
-        } catch (NumberFormatException e) {
-            showAlert(Alert.AlertType.ERROR, "Contact number must be a valid integer.");
+        if (phoneStr.isEmpty() || !phoneStr.matches("\\d+")) {
+            invalid.setText("Invalid input.");
+            invalid.setVisible(true);
             return;
+        } else {
+            invalid.setVisible(false);
+            try {
+                phone = Integer.parseInt(phoneStr);
+            } catch (NumberFormatException e) {
+                invalid.setText("Invalid input.");
+                invalid.setVisible(true);
+                return;
+            }
         }
-
         int aage;
         try {
             aage = Integer.parseInt(agee);
