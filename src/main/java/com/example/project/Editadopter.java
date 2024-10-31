@@ -30,7 +30,7 @@ public class Editadopter {
     private JFXTextField email;
 
     @FXML
-    private TableColumn<Adopter, ?> emailcoulmn;
+    private TableColumn<Adopter, String> emailcoulmn;
 
     @FXML
     private JFXTextField fname;

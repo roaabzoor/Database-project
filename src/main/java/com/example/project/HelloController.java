@@ -2,13 +2,22 @@ package com.example.project;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.media.AudioClip;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
+import javafx.util.Duration;
+
 import java.io.IOException;
 import java.sql.*;
 
@@ -25,7 +34,15 @@ public class HelloController  {
     @FXML
     private JFXTextField loginshow;
     String namee ;
+    @FXML
+    private Label invalid;
+    private MediaPlayer successPlayer; // MediaPlayer for sound
 
+    public void initialize() {
+        // Load the sound file using Media
+        Media sound = new Media(getClass().getResource("/com/example/project/5iOSXjzSS2c.mp3").toString());
+        successPlayer = new MediaPlayer(sound);
+    }
 
     public void gotomenu() throws IOException {
 
@@ -55,33 +72,34 @@ public class HelloController  {
                     Menu homeController = loader.getController();
                     homeController.setfirstname(rs.getString("fname"));
 
-                    // Check if the user is an admin or not
                     if ("admin".equals(rs.getString("jopposition"))) {
-                        homeController.setButtonVisibility(true); // Show buttons for admin
+                        homeController.setButtonVisibility(true);
                     } else if ("notadmin".equals(rs.getString("jopposition"))) {
-                        homeController.setButtonVisibility(false); // Hide buttons for not admin
+                        homeController.setButtonVisibility(false);
                     }
+
+                    successPlayer.play();
+                    showToast("You have logged in successfully!");
 
                     Stage window = (Stage) loginpane.getScene().getWindow();
                     window.setScene(new Scene(menuRoot));
                     window.setWidth(720);
                     window.setHeight(490);
                     window.centerOnScreen();
-                    return;  // Exit after successful login
+                    return;
                 }
 
             }
-
-         /*   if (!userFound) {
-                Alert alert = new Alert(Alert.AlertType.ERROR, "Invalid email or password.", ButtonType.OK);
-                alert.showAndWait();
-            }*/
+           if (!userFound) {
+               invalid.setText("Invalid email or password.");
+               invalid.setVisible(true);
+            }
 
         } catch (SQLException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         } finally {
-            // Close database resources
+
             try {
                 if (rs != null) rs.close();
                 if (stmt != null) stmt.close();
@@ -90,6 +108,32 @@ public class HelloController  {
                 e.printStackTrace();
             }
         }
+    }
+    private void showToast(String message) {
+        Stage toastStage = new Stage();
+        Label toastLabel = new Label(message);
+        toastLabel.setStyle("-fx-background-color: white; -fx-padding: 10; -fx-font-size: 14; " +
+                "-fx-border-radius: 5; -fx-background-radius: 5; -fx-text-fill: black;");
+
+        Scene scene = new Scene(toastLabel);
+        toastStage.setScene(scene);
+        toastStage.setWidth(300);
+        toastStage.setHeight(100);
+        toastStage.setResizable(false);
+        toastStage.setAlwaysOnTop(true);
+        toastStage.setOpacity(0.9);
+
+        toastStage.setX(loginpane.getScene().getWindow().getX() + 800);
+        toastStage.setY(loginpane.getScene().getWindow().getY() + 650);
+
+        toastStage.show();
+
+        FadeTransition fadeTransition = new FadeTransition(Duration.seconds(3), toastLabel);
+        fadeTransition.setFromValue(1.0);
+        fadeTransition.setToValue(0.0);
+        fadeTransition.setOnFinished(event -> toastStage.close());
+
+        fadeTransition.play();
     }
 
     public void gotoforget() throws IOException{
