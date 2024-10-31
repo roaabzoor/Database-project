@@ -10,7 +10,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="adddpet" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Addpet">
    <children>
       <ImageView fitHeight="427.0" fitWidth="386.0" layoutX="-7.0" layoutY="-32.0">
@@ -49,41 +48,46 @@
             <Font name="Times New Roman Bold" size="21.0" />
          </font>
       </Button>
-      <JFXTextField layoutX="384.0" layoutY="120.0" styleClass="textadopter" />
-      <Label layoutX="403.0" layoutY="81.0" prefHeight="17.0" prefWidth="98.0" text=" Pet Name" textFill="#391c00">
+      <JFXTextField layoutX="385.0" layoutY="95.0" styleClass="textadopter" />
+      <Label layoutX="403.0" layoutY="56.0" prefHeight="17.0" prefWidth="98.0" text=" Pet Name" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="558.0" layoutY="80.0" prefHeight="25.0" prefWidth="108.0" text="   Species" textFill="#391c00">
+      <Label layoutX="557.0" layoutY="55.0" prefHeight="25.0" prefWidth="108.0" text="   Species" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="22.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="557.0" layoutY="120.0" styleClass="textadopter" />
-      <Label layoutX="374.0" layoutY="169.0" prefHeight="25.0" prefWidth="156.0" text="        Breed" textFill="#391c00">
+      <JFXTextField layoutX="545.0" layoutY="95.0" styleClass="textadopter" />
+      <Label layoutX="374.0" layoutY="138.0" prefHeight="25.0" prefWidth="156.0" text="        Breed" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="22.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="544.0" layoutY="207.0" styleClass="textadopter" />
-      <Label layoutX="526.0" layoutY="280.0" prefHeight="25.0" prefWidth="172.0" text="  Adoption Status" textFill="#391c00">
+      <JFXTextField layoutX="544.0" layoutY="175.0" styleClass="textadopter" />
+      <Label layoutX="527.0" layoutY="221.0" prefHeight="25.0" prefWidth="172.0" text="  Adoption Status" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="22.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="544.0" layoutY="320.0" styleClass="textadopter" />
-      <Label layoutX="342.0" layoutY="280.0" prefHeight="25.0" prefWidth="220.0" text="          Arrival Date" textFill="#391c00">
+      <JFXTextField layoutX="545.0" layoutY="268.0" styleClass="textadopter" />
+      <Label layoutX="342.0" layoutY="221.0" prefHeight="25.0" prefWidth="220.0" text="          Arrival Date" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="22.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="384.0" layoutY="207.0" styleClass="textadopter" />
-      <Label layoutX="557.0" layoutY="169.0" prefHeight="25.0" prefWidth="108.0" text="       Age" textFill="#391c00">
+      <JFXTextField layoutX="384.0" layoutY="175.0" styleClass="textadopter" />
+      <Label layoutX="557.0" layoutY="138.0" prefHeight="25.0" prefWidth="108.0" text="       Age" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="22.0" />
          </font>
       </Label>
-      <JFXTextField layoutX="384.0" layoutY="320.0" styleClass="textadopter" />
+      <JFXTextField layoutX="384.0" layoutY="268.0" styleClass="textadopter" />
+      <Label layoutX="420.0" layoutY="316.0" prefHeight="25.0" prefWidth="220.0" text="        Upload Image" textFill="#391c00">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
