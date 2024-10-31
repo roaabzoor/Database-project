@@ -29,4 +29,7 @@ public class Adopter {
     public String getAddress() { return address; }
     public int getAge() { return age; }
     public String getContactnumber() { return contactnumber; }
+
+    public void setFname(String fname) {
+    }
 }

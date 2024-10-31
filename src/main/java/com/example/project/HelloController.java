@@ -112,8 +112,8 @@ public class HelloController  {
     private void showToast(String message) {
         Stage toastStage = new Stage();
         Label toastLabel = new Label(message);
-        toastLabel.setStyle("-fx-background-color: white; -fx-padding: 10; -fx-font-size: 14; " +
-                "-fx-border-radius: 5; -fx-background-radius: 5; -fx-text-fill: black;");
+        toastLabel.setStyle("-fx-background-color: rgba(57, 28, 0, 0.5); -fx-padding: 10; -fx-font-size: 14; " +
+                "-fx-border-radius: 5; -fx-background-radius: 5; -fx-text-fill: #ffffff;");
 
         Scene scene = new Scene(toastLabel);
         toastStage.setScene(scene);
