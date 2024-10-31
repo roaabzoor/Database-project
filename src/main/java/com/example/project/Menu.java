@@ -1,10 +1,13 @@
 package com.example.project;
 
 import com.jfoenix.controls.JFXTextField;
+import eu.hansolo.toolbox.properties.StringProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -25,12 +28,15 @@ public class Menu implements Initializable {
 
     @FXML
     public AnchorPane menu;
+
     @FXML
-    private JFXTextField firstname;
+    private Label firstname;
+
     @FXML
     private Button emplyeebtn;
     @FXML
     private Button veterinarinbtn;
+
     public void goToLogin() throws IOException {
         AnchorPane root= FXMLLoader.load(getClass().getResource("login.fxml"));
         menu.getChildren().setAll(root);
@@ -60,9 +66,10 @@ public class Menu implements Initializable {
         AnchorPane root = FXMLLoader.load(getClass().getResource("Supplies.fxml"));
         menu.getChildren().setAll(root);
     }
+
+
     public void setfirstname(String firstName) {
         firstname.setText(firstName);
-
     }
 
     public void setButtonVisibility(boolean isVisible) {

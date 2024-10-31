@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="editsupply" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Editsupply">
+<AnchorPane fx:id="editsupply" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Editsupply">
    <children>
       <ImageView fitHeight="450.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -26,7 +26,7 @@
                </font>
             </Label>
             <Line endX="66.60000610351562" endY="-6.5999908447265625" layoutX="427.0" layoutY="71.0" startX="-86.00003051757812" startY="-6.5999908447265625" stroke="#480000" />
-            <Label layoutX="258.0" layoutY="170.0" prefHeight="36.0" prefWidth="142.0" text="Supplier Name" textFill="#391c00">
+            <Label layoutX="258.0" layoutY="170.0" prefHeight="36.0" prefWidth="142.0" text="Supplier ID" textFill="#391c00">
                <font>
                   <Font name="Times New Roman Bold" size="22.0" />
                </font>

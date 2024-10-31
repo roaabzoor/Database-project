@@ -49,6 +49,7 @@ public class Editadopter {
 
     @FXML
     private TableColumn<Adopter, String> number;
+
     @FXML
     public void initialize() {
         id.setCellValueFactory(new PropertyValueFactory<>("adopterid"));
@@ -64,6 +65,7 @@ public class Editadopter {
             e.printStackTrace();
         }
     }
+
     private Connection connect() throws SQLException {
         database b = new database();
         return DriverManager.getConnection(b.url, b.user, b.password);
@@ -163,11 +165,9 @@ public class Editadopter {
         Adopter selectedAdopter = adoptertable.getSelectionModel().getSelectedItem();
 
         if (selectedAdopter == null) {
-            System.out.println("No adopter selected for deletion.");
-            return; // Exit if no selection
+            System.out.println("No adopter selected.");
+            return;
         }
-
-        // Confirm deletion
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION,
                 "Are you sure you want to delete this adopter?",
                 ButtonType.YES, ButtonType.NO);
@@ -176,23 +176,30 @@ public class Editadopter {
         Optional<ButtonType> result = alert.showAndWait();
 
         if (result.isPresent() && result.get() == ButtonType.YES) {
-            // Proceed with deletion
             String deleteQuery = "DELETE FROM adopter WHERE adopterid = ?";
 
             try (Connection conn = connect();
                  PreparedStatement stmt = conn.prepareStatement(deleteQuery)) {
 
-                // Ensure you set the adopter ID as an integer
                 stmt.setInt(1, selectedAdopter.getAdopterid());
                 int rowsAffected = stmt.executeUpdate();
 
                 if (rowsAffected > 0) {
-                    System.out.println("Adopter deleted successfully.");
+                    Alert successAlert = new Alert(Alert.AlertType.INFORMATION,
+                            "Adopter deleted successfully.",
+                            ButtonType.OK);
+                    successAlert.setTitle("Deletion Successful");
+                    successAlert.setHeaderText(null);
+                    successAlert.showAndWait();
 
-                    // Remove the selected adopter from the TableView
                     adoptertable.getItems().remove(selectedAdopter);
                 } else {
-                    System.out.println("No adopter found with the given ID.");
+                    Alert notFoundAlert = new Alert(Alert.AlertType.ERROR,
+                            "No adopter found with the given ID.",
+                            ButtonType.OK);
+                    notFoundAlert.setTitle("Deletion Error");
+                    notFoundAlert.setHeaderText(null);
+                    notFoundAlert.showAndWait();
                 }
             } catch (SQLException e) {
                 e.printStackTrace();

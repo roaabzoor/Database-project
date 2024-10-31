@@ -20,10 +20,13 @@
       </ImageView>
       <Pane prefHeight="450.0" prefWidth="700.0" styleClass="adddemployee" stylesheets="@css/project.css">
          <children>
-            <TableView layoutX="257.0" layoutY="65.0" prefHeight="208.0" prefWidth="429.0">
+            <TableView fx:id="supplytable" layoutX="257.0" layoutY="65.0" prefHeight="208.0" prefWidth="429.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn fx:id="supplyid" prefWidth="75.199951171875" text="supplyid" />
+                <TableColumn fx:id="supplyname" prefWidth="84.79998779296875" text="supplyname" />
+                  <TableColumn fx:id="quantity" prefWidth="76.79998779296875" text="quantity" />
+                  <TableColumn fx:id="totalcost" prefWidth="78.39999389648438" text="totalcost" />
+                  <TableColumn fx:id="supplierid" prefWidth="74.4000244140625" text="supplierid" />
               </columns>
             </TableView>
             <Label layoutX="148.0" layoutY="14.0" prefHeight="36.0" prefWidth="187.0" text="Search supply." textFill="#391c00">
@@ -36,7 +39,7 @@
                   <Image url="@image/back-button.png" />
                </image>
             </ImageView>
-            <Label layoutX="257.0" layoutY="282.0" prefHeight="35.0" prefWidth="106.0" styleClass="LOGIN" stylesheets="@css/project.css" text=" Search by" textFill="LINEN">
+            <Label layoutX="257.0" layoutY="282.0" prefHeight="35.0" prefWidth="106.0" styleClass="LOGIN" stylesheets="@css/project.css" text=" Search by :" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
@@ -46,24 +49,19 @@
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="387.0" layoutY="326.0" prefHeight="27.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
-            <Label layoutX="263.0" layoutY="356.0" prefHeight="44.0" prefWidth="126.0" text="Supplier Name:" textFill="LINEN">
+            <JFXTextField fx:id="subid" layoutX="387.0" layoutY="326.0" prefHeight="27.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
+            <Label layoutX="263.0" layoutY="356.0" prefHeight="44.0" prefWidth="126.0" text="Supplier ID:" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </Label>
-            <JFXTextField layoutX="387.0" layoutY="365.0" prefHeight="27.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
-            <JFXButton layoutX="268.0" layoutY="403.0" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Search " textFill="LINEN">
+            <JFXTextField fx:id="suppid" layoutX="387.0" layoutY="365.0" prefHeight="27.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
+            <JFXButton layoutX="553.0" layoutY="361.0" onAction="#searchsupply" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Search " textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="414.0" layoutY="403.0" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Delete" textFill="LINEN">
-               <font>
-                  <Font name="Times New Roman Bold" size="18.0" />
-               </font>
-            </JFXButton>
-            <JFXButton layoutX="553.0" layoutY="403.0" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="View all" textFill="LINEN">
+            <JFXButton layoutX="553.0" layoutY="403.0" onAction="#deletesupply" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Delete" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>

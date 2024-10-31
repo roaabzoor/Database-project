@@ -36,10 +36,9 @@ public class HelloController  {
     String namee ;
     @FXML
     private Label invalid;
-    private MediaPlayer successPlayer; // MediaPlayer for sound
+    private MediaPlayer successPlayer;
 
     public void initialize() {
-        // Load the sound file using Media
         Media sound = new Media(getClass().getResource("/com/example/project/5iOSXjzSS2c.mp3").toString());
         successPlayer = new MediaPlayer(sound);
     }
