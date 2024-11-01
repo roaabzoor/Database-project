@@ -117,6 +117,10 @@ public class HelloController  {
         toastStage.setResizable(false);
         toastStage.setAlwaysOnTop(true);
         toastStage.setOpacity(0.9);
+
+        toastStage.setX(loginpane.getScene().getWindow().getX() + 800);
+        toastStage.setY(loginpane.getScene().getWindow().getY() + 650);
+
         toastStage.show();
 
         FadeTransition fadeTransition = new FadeTransition(Duration.seconds(3), toastLabel);

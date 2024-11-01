@@ -33,7 +33,7 @@
             <TableColumn fx:id="vetcolmn" prefWidth="92.80001831054688" text="Veterinarianid" />
         </columns>
       </TableView>
-      <JFXButton layoutX="430.0" layoutY="272.0" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Search " textFill="LINEN">
+      <JFXButton layoutX="430.0" layoutY="272.0" onAction="#searchrecord" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Search " textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
@@ -61,7 +61,7 @@
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Label>
-      <JFXButton layoutX="565.0" layoutY="272.0" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Delete" textFill="LINEN">
+      <JFXButton layoutX="565.0" layoutY="272.0" onAction="#deleterecord" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Delete" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>

@@ -1,10 +1,13 @@
 package com.example.project;
 
 import com.jfoenix.controls.JFXTextField;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -12,6 +15,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.Optional;
 
 public class Searchrecord {
     @FXML
@@ -50,9 +54,14 @@ public class Searchrecord {
     private TableColumn<Record,String> vetcolmn;
 
     public ObservableList<Record> recordList = FXCollections.observableArrayList();
+
+    private Connection connect() throws SQLException {
+        database b = new database();
+        return DriverManager.getConnection(b.url, b.user, b.password);
+    }
+
     @FXML
-    /*public void initialize() {
-        // Set up cell value factories for each column
+    public void initialize() {
         idcolumn.setCellValueFactory(new PropertyValueFactory<>("recordId"));
         diagnosiscolumn.setCellValueFactory(new PropertyValueFactory<>("diagnosis"));
         treatmentcolumn.setCellValueFactory(new PropertyValueFactory<>("treatment"));
@@ -61,42 +70,153 @@ public class Searchrecord {
         dosacolumn.setCellValueFactory(new PropertyValueFactory<>("dosage"));
         stautscolmn.setCellValueFactory(new PropertyValueFactory<>("vaccinationStatus"));
 
-        // Load data into the TableView
         try {
             showalltable();
         } catch (IOException | SQLException e) {
             e.printStackTrace();
         }
-    }*/
+    }
 
     public void showalltable() throws IOException, SQLException {
         recordList.clear();
-        String sql = "SELECT recordid, diagnosis, treatment, dosage, vaccination_status, pet_id, veterinarian_id FROM medicalrecord;";
 
-        try (Connection conn = DriverManager.getConnection("your_database_url", "your_username", "your_password");
+        String sql = "SELECT * FROM medicalrecord";
+
+        try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(sql);
              ResultSet rs = pstmt.executeQuery()) {
 
-            while (rs.next()) {
-                int id = rs.getInt("recordid");
-                String diagnosis = rs.getString("diagnosis");
-                String treatment = rs.getString("treatment");
-                String vaccinationStatus = rs.getString("vaccination_status");
-                int petId = rs.getInt("pet_id");
-                int veterinarianId = rs.getInt("veterinarian_id");
-                String dosage = rs.getString("dosage");
-
-                // Create a new Record object and add it to the list
-                Record record = new Record(id, diagnosis, treatment, dosage, vaccinationStatus, petId, veterinarianId);
-                recordList.add(record);
+            if (!rs.isBeforeFirst()) {
+                System.out.println("No records found.");
+            } else {
+                while (rs.next()) {
+                    Record record = new Record(
+                            rs.getInt("recordid"),
+                            rs.getString("diagnosis"),
+                            rs.getString("treatment"),
+                            rs.getString("dosage"),
+                            rs.getString("vaccination_status"),
+                            rs.getInt("pet_id"),
+                            rs.getInt("veterinarian_id")
+                    );
+                    recordList.add(record); // Add to the observable list
+                }
+                Platform.runLater(() -> recordtable.setItems(recordList));
             }
 
-            recordtable.setItems(recordList); // Set the items for the TableView
         } catch (SQLException e) {
+            System.out.println("SQL Error Code: " + e.getErrorCode());
+            System.out.println("SQL State: " + e.getSQLState());
             e.printStackTrace();
         }
     }
 
+    public void searchrecord() throws IOException, SQLException {
+        recordtable.getItems().clear();
+
+        String idInput = medicaltext.getText().trim();
+        String vetInput = vettext.getText().trim();
+        String petInput = petext.getText().trim();
+
+        String query = "SELECT * FROM medicalrecord WHERE 1=1";
+        if (!idInput.isEmpty()) {
+            query += " AND recordid = ?";
+        }
+        if (!vetInput.isEmpty()) {
+            query += " AND veterinarian_id = ?";
+        }
+        if (!petInput.isEmpty()) {
+            query += " AND pet_id = ?";
+        }
+
+        try (Connection conn = connect();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            int paramIndex = 1;
+            if (!idInput.isEmpty()) {
+                stmt.setInt(paramIndex++, Integer.parseInt(idInput));
+            }
+            if (!vetInput.isEmpty()) {
+                stmt.setInt(paramIndex++, Integer.parseInt(vetInput));
+            }
+            if (!petInput.isEmpty()) {
+                stmt.setInt(paramIndex++, Integer.parseInt(petInput));
+            }
+
+            System.out.println(stmt.toString());
+
+            ResultSet rs = stmt.executeQuery();
+            ObservableList<Record> Records = FXCollections.observableArrayList();
+
+            while (rs.next()) {
+                Record record = new Record(
+                        rs.getInt("recordid"),
+                        rs.getString("diagnosis"),
+                        rs.getString("treatment"),
+                        rs.getString("dosage"),
+                        rs.getString("vaccination_status"),
+                        rs.getInt("pet_id"),
+                        rs.getInt("veterinarian_id")
+                );
+                Records.add(record);
+            }
+            recordtable.setItems(Records);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("SQLState: " + e.getSQLState());
+            System.out.println("Error Code: " + e.getErrorCode());
+            System.out.println("Message: " + e.getMessage());
+        }
+    }
+
+    public void deleterecord() throws IOException, SQLException {
+        Record selectedrecord = recordtable.getSelectionModel().getSelectedItem();
+
+        if (selectedrecord == null) {
+            System.out.println("No adopter selected.");
+            return;
+        }
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION,
+                "Are you sure you want to delete this Record?",
+                ButtonType.YES, ButtonType.NO);
+        alert.setTitle("Confirm Deletion");
+        alert.setHeaderText(null);
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.isPresent() && result.get() == ButtonType.YES) {
+            String deleteQuery = "DELETE FROM medicalrecord WHERE recordid = ?";
+
+            try (Connection conn = connect();
+                 PreparedStatement stmt = conn.prepareStatement(deleteQuery)) {
+
+                stmt.setInt(1, selectedrecord.getRecordId());
+                int rowsAffected = stmt.executeUpdate();
+
+                if (rowsAffected > 0) {
+                    Alert successAlert = new Alert(Alert.AlertType.INFORMATION,
+                            "Record deleted successfully.",
+                            ButtonType.OK);
+                    successAlert.setTitle("Deletion Successful");
+                    successAlert.setHeaderText(null);
+                    successAlert.showAndWait();
+
+                    recordtable.getItems().remove(selectedrecord);
+                } else {
+                    Alert notFoundAlert = new Alert(Alert.AlertType.ERROR,
+                            "No record found with the given ID.",
+                            ButtonType.OK);
+                    notFoundAlert.setTitle("Deletion Error");
+                    notFoundAlert.setHeaderText(null);
+                    notFoundAlert.showAndWait();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+                System.out.println("Error during deletion: " + e.getMessage());
+            }
+        } else {
+            System.out.println("Deletion canceled.");
+        }
+    }
     public void goTomenu() throws IOException {
         AnchorPane root= FXMLLoader.load(getClass().getResource("menu.fxml"));
         searchrecord.getChildren().setAll(root);

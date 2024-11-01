@@ -61,14 +61,14 @@ public class Searchemployee {
 
     @FXML
     public void initialize() {
-        ssn.setCellValueFactory(new PropertyValueFactory<>("ssn")); // Matches getSsn()
+        ssn.setCellValueFactory(new PropertyValueFactory<>("ssn"));
         fname.setCellValueFactory(new PropertyValueFactory<>("fname"));
         lname.setCellValueFactory(new PropertyValueFactory<>("lname"));
         email.setCellValueFactory(new PropertyValueFactory<>("email"));
-        pass.setCellValueFactory(new PropertyValueFactory<>("epassword")); // Matches getEpassword()
+        pass.setCellValueFactory(new PropertyValueFactory<>("epassword"));
         salary.setCellValueFactory(new PropertyValueFactory<>("salary"));
         phone.setCellValueFactory(new PropertyValueFactory<>("contactnumber"));
-        job.setCellValueFactory(new PropertyValueFactory<>("jobPosition")); // Change to match getter
+        job.setCellValueFactory(new PropertyValueFactory<>("jobPosition"));
         gender.setCellValueFactory(new PropertyValueFactory<>("gender"));
         hire.setCellValueFactory(new PropertyValueFactory<>("hireDate"));
 
