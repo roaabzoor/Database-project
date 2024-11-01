@@ -1,5 +1,4 @@
 package com.example.project;
-
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
