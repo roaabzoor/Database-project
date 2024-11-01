@@ -13,52 +13,49 @@
 
 <AnchorPane fx:id="editepet" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Editpet">
    <children>
-      <ImageView fitHeight="346.0" fitWidth="352.0" layoutX="352.0" layoutY="14.0">
+      <ImageView fitHeight="363.0" fitWidth="295.0" layoutX="400.0" layoutY="20.0">
          <image>
             <Image url="@image/lolo.png" />
          </image>
       </ImageView>
-      <Button layoutX="394.0" layoutY="332.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="118.0" styleClass="home" text="Search By :" textFill="LINEN">
+      <Button layoutX="147.0" layoutY="352.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="118.0" styleClass="home" text="Search By :" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="394.0" layoutY="369.0" mnemonicParsing="false" prefHeight="1.0" prefWidth="118.0" styleClass="home" text="ID" textFill="LINEN">
+      <Button layoutX="568.0" layoutY="394.0" mnemonicParsing="false" onAction="#deletePet" prefHeight="1.0" prefWidth="118.0" styleClass="home" text="Delete" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="534.0" layoutY="369.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="135.0" styleClass="home" text="Breed" textFill="LINEN">
+      <Button layoutX="14.0" layoutY="352.0" mnemonicParsing="false" onAction="#goTomeue" prefHeight="32.0" prefWidth="78.0" styleClass="home" text="Menu" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="469.0" layoutY="408.0" mnemonicParsing="false" prefHeight="1.0" prefWidth="118.0" styleClass="home" text="Delete" textFill="LINEN">
+      <Button layoutX="14.0" layoutY="394.0" mnemonicParsing="false" onAction="#goTopet" prefHeight="32.0" prefWidth="78.0" styleClass="home" text="Back" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="54.0" layoutY="403.0" mnemonicParsing="false" onAction="#goTomeue" prefHeight="32.0" prefWidth="78.0" styleClass="home" text="Menu" textFill="LINEN">
-         <font>
-            <Font name="Times New Roman Bold" size="17.0" />
-         </font>
-      </Button>
-      <Button layoutX="214.0" layoutY="403.0" mnemonicParsing="false" onAction="#goTopet" prefHeight="32.0" prefWidth="78.0" styleClass="home" text="Back" textFill="LINEN">
-         <font>
-            <Font name="Times New Roman Bold" size="17.0" />
-         </font>
-      </Button>
-      <JFXTextField layoutX="534.0" layoutY="332.0" styleClass="textadopter" />
+      <JFXTextField fx:id="petiid" layoutX="389.0" layoutY="355.0" styleClass="textadopter" />
       <Label layoutX="206.0" layoutY="14.0" prefHeight="27.0" prefWidth="289.0" text="          Search &amp; Delete Pet" textFill="#391c00">
          <font>
             <Font name="David Bold" size="23.0" />
          </font>
       </Label>
       <Line endX="109.20001220703125" endY="-6.399993896484375" layoutX="366.0" layoutY="48.0" startX="-134.0" startY="-6.399993896484375" stroke="#793d05" />
-      <TableView layoutX="20.0" layoutY="65.0" prefHeight="320.0" prefWidth="329.0">
+      <TableView fx:id="pettable" layoutX="7.0" layoutY="71.0" prefHeight="267.0" prefWidth="405.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="petidcoulmn" prefWidth="42.0" text="petid" />
+          <TableColumn fx:id="petnamecolumn" prefWidth="75.0" text="pet name" />
+            <TableColumn fx:id="speciescolumn" prefWidth="55.0" text="species" />
+            <TableColumn fx:id="breedcoulmn" prefWidth="64.0" text="breed" />
+            <TableColumn fx:id="admissiondatecolmn" prefWidth="97.0" text="adoption status" />
+            <TableColumn fx:id="agecoulmn" prefWidth="64.0" text="age" />
+            <TableColumn fx:id="adoptiondatecolumn" minWidth="0.0" prefWidth="131.0" text="admission date" />
+            <TableColumn fx:id="adopteridcolumn" prefWidth="76.0" text="adopter id" />
+            <TableColumn fx:id="employeeidcolumn" prefWidth="81.0" text="employee id" />
         </columns>
       </TableView>
       <ImageView fitHeight="60.0" fitWidth="70.0">
@@ -66,5 +63,21 @@
             <Image url="@image/house.png" />
          </image>
       </ImageView>
+      <Label layoutX="270.0" layoutY="354.0" prefHeight="27.0" prefWidth="100.0" text="   Pet ID :" textFill="#391c00">
+         <font>
+            <Font name="David Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="253.0" layoutY="396.0" prefHeight="27.0" prefWidth="147.0" text="  Adopter ID : " textFill="#391c00">
+         <font>
+            <Font name="David Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="adoptid" layoutX="389.0" layoutY="397.0" styleClass="textadopter" />
+      <Button layoutX="568.0" layoutY="352.0" mnemonicParsing="false" onAction="#searchPet" prefHeight="1.0" prefWidth="118.0" styleClass="home" text="Search" textFill="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="17.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
