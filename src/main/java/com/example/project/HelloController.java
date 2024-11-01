@@ -7,12 +7,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.media.AudioClip;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
@@ -121,10 +117,6 @@ public class HelloController  {
         toastStage.setResizable(false);
         toastStage.setAlwaysOnTop(true);
         toastStage.setOpacity(0.9);
-
-        toastStage.setX(loginpane.getScene().getWindow().getX() + 800);
-        toastStage.setY(loginpane.getScene().getWindow().getY() + 650);
-
         toastStage.show();
 
         FadeTransition fadeTransition = new FadeTransition(Duration.seconds(3), toastLabel);

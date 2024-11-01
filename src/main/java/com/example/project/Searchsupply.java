@@ -68,21 +68,13 @@ public class Searchsupply {
     public void searchsupply() throws IOException, SQLException {
         supplytable.getItems().clear();
 
-
         String idInput = subid.getText().trim();
-        System.out.println(String.valueOf(idInput)+"here");
         String employeeIdInput = suppid.getText().trim();
-
-        System.out.println("Supply ID input: '" + idInput + "'");
-
-        System.out.println("Employee ID input: '" + employeeIdInput + "'");
-
 
         String query = "SELECT * FROM supplies WHERE 1=1";
         if (!idInput.isEmpty()) {
             query += " AND supplyid = ?";
         }
-
         if (!employeeIdInput.isEmpty()) {
             query += " AND employeeid = ?";
         }
@@ -93,11 +85,9 @@ public class Searchsupply {
             int paramIndex = 1;
             if (!idInput.isEmpty()) {
                 try {
-                    int x= Integer.valueOf(idInput);
                     stmt.setInt(paramIndex++, Integer.parseInt(idInput));
                 } catch (NumberFormatException e) {
-                    System.out.println("Supply ID must be a valid integer: '" + idInput + "'");
-                    return; // Exit if not valid
+                    showAlert("Invalid Input", "Supply ID must be a valid integer: '" + idInput + "'");                    return;
                 }
             }
 
@@ -105,13 +95,11 @@ public class Searchsupply {
                 try {
                     stmt.setInt(paramIndex++, Integer.parseInt(employeeIdInput));
                 } catch (NumberFormatException e) {
-                    System.out.println("Employee ID must be a valid integer: '" + employeeIdInput + "'");
-                    return; // Exit if not valid
+                    showAlert("Invalid Input", "Employee ID must be a valid integer: '" + employeeIdInput + "'");
+                    return;
                 }
             }
-
             System.out.println(stmt.toString());
-
             ResultSet rs = stmt.executeQuery();
             ObservableList<Supply> supplies = FXCollections.observableArrayList();
 
@@ -126,13 +114,22 @@ public class Searchsupply {
                 supplies.add(supply);
             }
 
-            supplytable.setItems(supplies); // Bind the list to the TableView
+            supplytable.setItems(supplies);
         } catch (SQLException e) {
-            e.printStackTrace(); // Handle SQL exceptions
+            e.printStackTrace();
             System.out.println("SQLState: " + e.getSQLState());
             System.out.println("Error Code: " + e.getErrorCode());
             System.out.println("Message: " + e.getMessage());
         }
+    }
+        private void showAlert(String title, String message) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle(title);
+            alert.setHeaderText(null);
+            alert.setContentText(message);
+
+            alert.showAndWait();
+
     }
 
     public void showalltable() throws IOException , SQLException{
