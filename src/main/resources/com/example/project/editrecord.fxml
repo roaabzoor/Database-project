@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="editrecord" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Editrecord">
+<AnchorPane fx:id="editrecord" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Editrecord">
    <children>
       <Label layoutX="14.0" layoutY="14.0" prefHeight="38.0" prefWidth="304.0" styleClass="textadopter" stylesheets="@css/project.css" text="  Edit medical record." textFill="LINEN">
          <font>
@@ -38,7 +38,6 @@
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="treatment1" layoutX="14.0" layoutY="117.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
       <JFXTextField fx:id="dosage1" layoutX="14.0" layoutY="208.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
       <JFXButton layoutX="13.0" layoutY="280.0" onAction="#saveMedicalRecord" prefHeight="44.0" prefWidth="143.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Update" textFill="LINEN">
          <font>
@@ -79,5 +78,6 @@
          </font>
       </Button>
       <JFXComboBox fx:id="diagnosis" layoutX="167.0" layoutY="208.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
+      <JFXComboBox fx:id="treatment1" layoutX="13.0" layoutY="116.0" prefHeight="35.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
    </children>
 </AnchorPane>

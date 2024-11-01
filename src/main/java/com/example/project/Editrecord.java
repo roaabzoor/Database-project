@@ -25,12 +25,12 @@ public class Editrecord {
     private JFXTextField recodid;
 
     @FXML
-    private JFXTextField treatment1;
+    private JFXComboBox<String> treatment1;
 
     @FXML
     private JFXComboBox<String> vaccinationstatu;
 
-    // Initialize method to add options to both ComboBoxes
+
     public void initialize() {
         diagnosis.getItems().addAll(
                 "Healthy",
@@ -41,7 +41,16 @@ public class Editrecord {
                 "Routine Check-up",
                 "Allergy"
         );
-
+        treatment1.getItems().addAll(
+                "Antibiotics",
+                "Anti-inflammatory Medication",
+                "Surgery",
+                "Vaccination",
+                "Pain Management",
+                "Hydration Therapy",
+                "Allergy Medication",
+                "Physical Therapy",
+                "Dietary Changes");
         vaccinationstatu.getItems().addAll(
                 "Pending",
                 "Completed",
@@ -77,7 +86,7 @@ public class Editrecord {
                     // Populate fields with retrieved data
                     diagnosis.setValue(rs.getString("diagnosis"));
                     dosage1.setText(rs.getString("dosage"));
-                    treatment1.setText(rs.getString("treatment"));
+                    treatment1.setValue(rs.getString("treatment"));
                     vaccinationstatu.setValue(rs.getString("vaccination_status"));
                 } else {
                     showAlert(Alert.AlertType.ERROR, "Medical Record not found with the given ID.");
@@ -91,7 +100,7 @@ public class Editrecord {
 
     // Method to save updated medical record to the database
     public void saveMedicalRecord() {
-        if (diagnosis.getValue() == null || dosage1.getText().isEmpty() || treatment1.getText().isEmpty() || vaccinationstatu.getValue() == null) {
+        if (diagnosis.getValue() == null || dosage1.getText().isEmpty() || treatment1.getValue().isEmpty() || vaccinationstatu.getValue() == null) {
             showAlert(Alert.AlertType.ERROR, "All fields must be filled out.");
             return;
         }
@@ -99,7 +108,7 @@ public class Editrecord {
         // Retrieve field values
         String diagnosis1 = diagnosis.getValue();
         String dosage = dosage1.getText();
-        String treatment = treatment1.getText();
+        String treatment = treatment1.getValue();
         String vaccinationStatus = vaccinationstatu.getValue();
 
         int rId;

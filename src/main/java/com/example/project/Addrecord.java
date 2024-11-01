@@ -26,8 +26,7 @@ public class Addrecord {
     private JFXTextField petid;
 
     @FXML
-    private JFXTextField treatment;
-
+    private JFXComboBox<String> treatment;
     @FXML
     private JFXComboBox<String> vaccinationstatus1;
 
@@ -44,7 +43,16 @@ public class Addrecord {
                 "Routine Check-up",
                 "Allergy"
         );
-
+        treatment.getItems().addAll(
+                "Antibiotics",
+                "Anti-inflammatory Medication",
+                "Surgery",
+                "Vaccination",
+                "Pain Management",
+                "Hydration Therapy",
+                "Allergy Medication",
+                "Physical Therapy",
+                "Dietary Changes");
         vaccinationstatus1.getItems().addAll(
                 "Pending",
                 "Completed",
@@ -65,7 +73,7 @@ public class Addrecord {
 
     public void saverecord() throws IOException {
         if (dosage.getText().isEmpty() || petid.getText().isEmpty() ||
-                treatment.getText().isEmpty() || vaccinationstatus1.getValue() == null ||
+                treatment.getValue().isEmpty() || vaccinationstatus1.getValue() == null ||
                 veteid.getText().isEmpty()) {
 
             showAlert(Alert.AlertType.ERROR, "All fields must be filled out.");
@@ -75,7 +83,7 @@ public class Addrecord {
         String diagnosisText = diagnosis.getValue();
         String dosageText = dosage.getText();
         String petId = petid.getText();
-        String treatmentText = treatment.getText();
+        String treatmentText = treatment.getValue();
         String vaccinationStatusText = vaccinationstatus1.getValue();
         String veterinarianId = veteid.getText();
 
