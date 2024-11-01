@@ -61,18 +61,18 @@ public class HelloController  {
                 if (rs.getString("email").equals(username.getText()) &&
                         rs.getString("epassword").equals(login_pass.getText())) {
 
+
+                    currentUser.Name=rs.getString("fname");
+                    if ("admin".equals(rs.getString("jopposition"))) {
+                        currentUser.Role="Admin";
+                    } else if ("notadmin".equals(rs.getString("jopposition"))) {
+                        currentUser.Role="Employee";
+                    }
                     userFound = true;
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("menu.fxml"));
                     Parent menuRoot = loader.load();
                     Menu homeController = loader.getController();
                     homeController.setfirstname(rs.getString("fname"));
-
-                    if ("admin".equals(rs.getString("jopposition"))) {
-                        homeController.setButtonVisibility(true);
-                    } else if ("notadmin".equals(rs.getString("jopposition"))) {
-                        homeController.setButtonVisibility(false);
-                    }
-
                     successPlayer.play();
                     showToast("You have logged in successfully!");
 

@@ -73,8 +73,14 @@ public class Menu implements Initializable {
     }
 
     public void setButtonVisibility(boolean isVisible) {
-        emplyeebtn.setVisible(isVisible);
-        veterinarinbtn.setVisible(isVisible);
+        if(currentUser.Role.equals("Admin")){
+            emplyeebtn.setVisible(true);
+            veterinarinbtn.setVisible(true);
+        }else{
+            emplyeebtn.setVisible(false);
+            veterinarinbtn.setVisible(false);
+        }
+
     }
     public MediaView mv=new MediaView();
 
@@ -82,8 +88,9 @@ public class Menu implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
+        setfirstname(currentUser.Name);
         String resourcePath = "/com/example/project/vid/vedio.mp4";
-
+        setButtonVisibility(true);
         URL resourceUrl = getClass().getResource(resourcePath);
 
             Media media = new Media(resourceUrl.toExternalForm());
@@ -93,12 +100,11 @@ public class Menu implements Initializable {
         mv.setFitWidth(1000);
         mv.setFitHeight(380);
 
-        // Maintain aspect ratio
         mv.setPreserveRatio(true);
 
-        // StackPane to hold the MediaView and set alignment to center
+
         StackPane root = new StackPane();
-        root.setAlignment(Pos.CENTER);  // Ensures video is centered
+        root.setAlignment(Pos.CENTER);
 
     }
     public void openButton() {
