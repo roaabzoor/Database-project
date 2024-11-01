@@ -10,10 +10,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+
 public class Addrecord {
     @FXML
     public AnchorPane addrecord;
@@ -36,7 +34,6 @@ public class Addrecord {
     @FXML
     private JFXTextField veteid;
 
-    // Initialize method to add options to both ComboBoxes
     public void initialize() {
         diagnosis.getItems().addAll(
                 "Healthy",
@@ -66,7 +63,6 @@ public class Addrecord {
         addrecord.getChildren().setAll(root);
     }
 
-    // Method to save the medical record to the database
     public void saverecord() throws IOException {
         if (dosage.getText().isEmpty() || petid.getText().isEmpty() ||
                 treatment.getText().isEmpty() || vaccinationstatus1.getValue() == null ||
@@ -76,7 +72,6 @@ public class Addrecord {
             return;
         }
 
-        // Retrieve field values
         String diagnosisText = diagnosis.getValue();
         String dosageText = dosage.getText();
         String petId = petid.getText();
@@ -84,7 +79,6 @@ public class Addrecord {
         String vaccinationStatusText = vaccinationstatus1.getValue();
         String veterinarianId = veteid.getText();
 
-        // Validate pet ID as an integer
         int petid1;
         try {
             petid1 = Integer.parseInt(petId);
@@ -93,7 +87,6 @@ public class Addrecord {
             return;
         }
 
-        // Validate veterinarian ID as an integer
         int veterinarianid1;
         try {
             veterinarianid1 = Integer.parseInt(veterinarianId);
@@ -101,12 +94,29 @@ public class Addrecord {
             showAlert(Alert.AlertType.ERROR, "Veterinarian ID must be a valid integer.");
             return;
         }
-
-        // Database connection
         database db = new database();
         try (Connection conn = DriverManager.getConnection(db.url, db.user, db.password)) {
-            String sql = "INSERT INTO medicalrecord (diagnosis, dosage, pet_id, treatment, vaccination_status, veterinarian_id) VALUES (?, ?, ?, ?, ?, ?)";
+            String checkPetSql = "SELECT COUNT(*) FROM pet WHERE petid = ?";
+            try (PreparedStatement checkPetStmt = conn.prepareStatement(checkPetSql)) {
+                checkPetStmt.setInt(1, petid1);
+                ResultSet rs = checkPetStmt.executeQuery();
+                if (rs.next() && rs.getInt(1) == 0) {
+                    showAlert(Alert.AlertType.ERROR, "Pet ID does not exist.");
+                    return;
+                }
+            }
 
+            String checkVeterinarianSql = "SELECT COUNT(*) FROM veterinarian WHERE veterinarianid = ?";
+            try (PreparedStatement checkVetStmt = conn.prepareStatement(checkVeterinarianSql)) {
+                checkVetStmt.setInt(1, veterinarianid1);
+                ResultSet rs = checkVetStmt.executeQuery();
+                if (rs.next() && rs.getInt(1) == 0) {
+                    showAlert(Alert.AlertType.ERROR, "Veterinarian ID does not exist.");
+                    return;
+                }
+            }
+
+            String sql = "INSERT INTO medicalrecord (diagnosis, dosage, pet_id, treatment, vaccination_status, veterinarian_id) VALUES (?, ?, ?, ?, ?, ?)";
             try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
                 pstmt.setString(1, diagnosisText);
                 pstmt.setString(2, dosageText);
@@ -123,8 +133,6 @@ public class Addrecord {
             showAlert(Alert.AlertType.ERROR, "Database error: " + e.getMessage());
         }
     }
-
-    // Method to show alerts for success and error messages
     private void showAlert(Alert.AlertType alertType, String message) {
         Alert alert = new Alert(alertType, message, ButtonType.OK);
         alert.setTitle(alertType == Alert.AlertType.ERROR ? "Input Error" : "Success");

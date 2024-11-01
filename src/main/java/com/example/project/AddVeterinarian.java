@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
@@ -40,7 +41,20 @@ public class AddVeterinarian {
     private JFXTextField salary;
 
     @FXML
-    private JFXTextField specialization;
+    private ComboBox<String> specialization;
+
+    public void initialize() {
+        specialization.getItems().addAll(
+                "Emergency Medicine",
+                "Internal Medicine",
+                "Surgery",
+                "Dermatology",
+                "Ophthalmology",
+                "Dentistry",
+                "Behavioral Medicine",
+                "Anesthesia",
+                "Radiology");
+    }
 
     public void goToLogin1() throws IOException {
         AnchorPane root = FXMLLoader.load(getClass().getResource("menu.fxml"));
@@ -56,7 +70,7 @@ public class AddVeterinarian {
         if (fname.getText().isEmpty() || lname.getText().isEmpty() ||
                 eamil.getText().isEmpty() || phonenum.getText().isEmpty() ||
                 address.getText().isEmpty() || salary.getText().isEmpty()
-                || specialization.getText().isEmpty()) {
+                || specialization.getValue().isEmpty()) {
 
             showAlert(Alert.AlertType.ERROR, "All fields must be filled out.");
             return;
@@ -66,7 +80,7 @@ public class AddVeterinarian {
         String mail = eamil.getText();
         String phoneStr = phonenum.getText();
         String address1 = address.getText();
-        String specialization1 = specialization.getText();
+        String specialization1 = specialization.getValue();
         int phone;
 
         if (phoneStr.isEmpty() || !phoneStr.matches("\\d+")) {

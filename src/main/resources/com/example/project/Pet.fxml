@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pet" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Pet">
+<AnchorPane fx:id="pet" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Pet">
    <children>
       <ImageView fitHeight="209.0" fitWidth="160.0" layoutX="149.0" layoutY="230.0">
          <image>
@@ -60,7 +60,7 @@
             <Font name="David Bold" size="28.0" />
          </font>
       </Label>
-      <Line endX="21.0" layoutX="340.0" layoutY="42.0" startX="-23.0" stroke="#391c00" />
+      <Line endX="47.199981689453125" endY="-3.814697265625E-6" layoutX="340.0" layoutY="42.0" startX="-23.0" stroke="#391c00" />
       <ImageView fitHeight="47.0" fitWidth="58.0" layoutX="642.0" layoutY="7.0">
          <image>
             <Image url="@image/house.png" />
