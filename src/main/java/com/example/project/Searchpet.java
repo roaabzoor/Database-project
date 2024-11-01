@@ -23,10 +23,17 @@ public class Searchpet {
     private JFXTextField age;
 
     @FXML
+    private JFXTextField adopterid;
+
+    @FXML
+    private JFXTextField employeeid;
+
+    @FXML
     private DatePicker arrivaldate;
 
     @FXML
-    private JFXTextField breed;
+    private ComboBox<String> species;
+
 
     @FXML
     private JFXTextField petid;
@@ -35,10 +42,17 @@ public class Searchpet {
     private JFXTextField petname;
 
     @FXML
-    private JFXTextField species;
+    private ComboBox<String> breed;
 
     public void initialize() {
         adoptionstatus.getItems().addAll("Adopted", "Available");
+        breed.getItems().addAll(
+                "Labrador", "Beagle", "Bulldog", "Poodle", "Golden Retriever",
+                "German Shepherd", "Rottweiler", "Yorkshire Terrier", "Dachshund", "Siberian Husky",
+                "Persian", "Maine Coon", "Siamese", "Ragdoll", "Bengal",
+                "Sphynx", "British Shorthair", "Scottish Fold", "American Shorthair", "Norwegian Forest"
+        );
+        species.getItems().addAll("Dog", "Cat");
     }
 
     public void loadPet() throws IOException, SQLException {
@@ -64,13 +78,15 @@ public class Searchpet {
                 ResultSet rs = pstmt.executeQuery();
 
                 if (rs.next()) {
-                    // Populate fields with retrieved data
                     petname.setText(rs.getString("petname"));
                     age.setText(String.valueOf(rs.getInt("age")));
                     arrivaldate.setValue(rs.getDate("admissiondate").toLocalDate());
-                    breed.setText(rs.getString("breed"));
-                    species.setText(rs.getString("species"));
+                    breed.setValue(rs.getString("breed"));
+                    species.setValue(rs.getString("species"));
                     adoptionstatus.setValue(rs.getString("adoption_status"));
+                    adopterid.setText(String.valueOf(rs.getInt("adopter_id")));
+                    employeeid.setText(String.valueOf(rs.getInt("employee_id")));
+
                 } else {
                     showAlert(Alert.AlertType.ERROR, "Pet not found with the given ID.");
                 }
@@ -82,35 +98,51 @@ public class Searchpet {
     }
 
     public void savePet() throws IOException, SQLException {
-        if (petname.getText().isEmpty() || age.getText().isEmpty() || breed.getText().isEmpty() ||
-                species.getText().isEmpty() || adoptionstatus.getValue() == null || arrivaldate.getValue() == null) {
+        if (petname.getText().isEmpty() || age.getText().isEmpty() || breed.getValue() == null ||
+                species.getValue() == null || adoptionstatus.getValue() == null || arrivaldate.getValue() == null) {
 
             showAlert(Alert.AlertType.ERROR, "All fields must be filled out.");
             return;
         }
 
-        // Retrieve and parse field values
         String petName = petname.getText();
-        String breedText = breed.getText();
-        String speciesText = species.getText();
+        String breedText = breed.getValue();
+        String speciesText = species.getValue();
         String adoptionStatus = adoptionstatus.getValue();
         LocalDate arrivalDate = arrivaldate.getValue();
 
-        int petId;
-        int petAge;
+        int petId, petAge, adopid, emid;
         try {
             petId = Integer.parseInt(petid.getText());
             petAge = Integer.parseInt(age.getText());
+            adopid = Integer.parseInt(adopterid.getText());
+            emid = Integer.parseInt(employeeid.getText());
         } catch (NumberFormatException e) {
-            showAlert(Alert.AlertType.ERROR, "Pet ID and Age must be valid integers.");
+            showAlert(Alert.AlertType.ERROR, "Pet ID, age, adopter ID, and employee ID must be valid integers.");
             return;
         }
 
-        // Database connection
         database db = new database();
         try (Connection conn = DriverManager.getConnection(db.url, db.user, db.password)) {
-            String sql = "UPDATE pet SET petname = ?, age = ?, admissiondate = ?, breed = ?, species = ?, adoption_status = ? WHERE petid = ?";
-
+            String checkAdopterSql = "SELECT COUNT(*) FROM adopter WHERE adopterid = ?";
+            try (PreparedStatement checkAdopterStmt = conn.prepareStatement(checkAdopterSql)) {
+                checkAdopterStmt.setInt(1, adopid);
+                ResultSet rs = checkAdopterStmt.executeQuery();
+                if (rs.next() && rs.getInt(1) == 0) {
+                    showAlert(Alert.AlertType.ERROR, "Adopter ID does not exist.");
+                    return;
+                }
+            }
+            String checkEmployeeSql = "SELECT COUNT(*) FROM employee WHERE ssn = ?";
+            try (PreparedStatement checkEmployeeStmt = conn.prepareStatement(checkEmployeeSql)) {
+                checkEmployeeStmt.setInt(1, emid);
+                ResultSet rs = checkEmployeeStmt.executeQuery();
+                if (rs.next() && rs.getInt(1) == 0) {
+                    showAlert(Alert.AlertType.ERROR, "Employee ID does not exist.");
+                    return;
+                }
+            }
+            String sql = "UPDATE pet SET petname = ?, age = ?, admissiondate = ?, breed = ?, species = ?, adoption_status = ?, adopter_id = ?, employee_id = ? WHERE petid = ?";
             try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
                 pstmt.setString(1, petName);
                 pstmt.setInt(2, petAge);
@@ -118,7 +150,9 @@ public class Searchpet {
                 pstmt.setString(4, breedText);
                 pstmt.setString(5, speciesText);
                 pstmt.setString(6, adoptionStatus);
-                pstmt.setInt(7, petId);
+                pstmt.setInt(7, adopid);
+                pstmt.setInt(8, emid);
+                pstmt.setInt(9, petId);
 
                 pstmt.executeUpdate();
                 showAlert(Alert.AlertType.INFORMATION, "Pet information updated successfully.");
@@ -128,8 +162,6 @@ public class Searchpet {
             showAlert(Alert.AlertType.ERROR, "Database error: " + e.getMessage());
         }
     }
-
-    // Method to show alerts for success and error messages
     private void showAlert(Alert.AlertType alertType, String message) {
         Alert alert = new Alert(alertType, message, ButtonType.OK);
         alert.setTitle(alertType == Alert.AlertType.ERROR ? "Input Error" : "Success");

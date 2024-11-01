@@ -12,7 +12,6 @@ public class pettt {
         private int adopterid;
         private int employeeid;
 
-        // Constructor with all parameters
         public pettt (int petid, String petname, int age, String breed, String species,
                    String adoptionDate, String admissionDate, int adopterid, int employeeid) {
             this.petid = petid;
@@ -26,7 +25,6 @@ public class pettt {
             this.employeeid = employeeid;
         }
 
-        // Getters and setters for each field
         public int getPetid() { return petid; }
         public void setPetid(int petid) { this.petid = petid; }
 
