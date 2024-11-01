@@ -175,8 +175,8 @@
                   <Font name="Times New Roman Bold" size="22.0" />
                </font>
             </Button>
-            <ComboBox fx:id="jopposition1" layoutX="533.0" layoutY="201.0" prefWidth="150.0" />
-            <DatePicker fx:id="hiredate1" layoutX="182.0" layoutY="378.0" />
+            <ComboBox fx:id="jopposition1" layoutX="540.0" layoutY="201.0" prefHeight="25.0" prefWidth="143.0" styleClass="textadopter" />
+            <DatePicker fx:id="hiredate1" layoutX="201.0" layoutY="378.0" prefHeight="25.0" prefWidth="135.0" />
          </children>
       </AnchorPane>
    </children>

@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="adddpet" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Addpet">
+<AnchorPane fx:id="adddpet" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Addpet">
    <children>
       <ImageView fitHeight="427.0" fitWidth="386.0" layoutX="-7.0" layoutY="-32.0">
          <image>
@@ -34,7 +34,7 @@
             <Image url="@image/house.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3618004d" height="450.0" stroke="#b9a89b" strokeType="INSIDE" width="700.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3618004d" height="450.0" stroke="#b9a89b" strokeType="INSIDE" styleClass="textadopter" width="700.0" />
       <Button layoutX="269.0" layoutY="359.0" mnemonicParsing="false" onAction="#savePet" prefHeight="33.0" prefWidth="98.0" styleClass="home" text="Save" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="21.0" />
@@ -89,9 +89,9 @@
       </Label>
       <ImageView fx:id="tempImage" fitHeight="150.0" fitWidth="200.0" layoutX="86.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true" />
       <DatePicker fx:id="arrivaldate" layoutX="375.0" layoutY="308.0" prefHeight="25.0" prefWidth="156.0" />
-      <ComboBox fx:id="adoptionstatus" layoutX="545.0" layoutY="308.0" prefHeight="25.0" prefWidth="135.0" />
-      <ComboBox fx:id="breed" layoutX="375.0" layoutY="234.0" prefHeight="25.0" prefWidth="135.0" />
-      <ComboBox fx:id="species" layoutX="543.0" layoutY="234.0" prefHeight="25.0" prefWidth="135.0" />
+      <ComboBox fx:id="adoptionstatus" layoutX="545.0" layoutY="308.0" prefHeight="25.0" prefWidth="135.0" styleClass="textadopter" />
+      <ComboBox fx:id="breed" layoutX="375.0" layoutY="234.0" prefHeight="25.0" prefWidth="135.0" styleClass="textadopter" />
+      <ComboBox fx:id="species" layoutX="543.0" layoutY="234.0" prefHeight="25.0" prefWidth="135.0" styleClass="textadopter" />
       <Label layoutX="550.0" layoutY="55.0" prefHeight="17.0" prefWidth="98.0" text="Adopter ID" textFill="#391c00">
          <font>
             <Font name="Times New Roman Bold" size="20.0" />

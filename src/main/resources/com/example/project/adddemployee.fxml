@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="adddemployee" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Adddemployee">
+<AnchorPane fx:id="adddemployee" prefHeight="450.0" prefWidth="700.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Adddemployee">
    <children>
       <HBox prefHeight="450.0" prefWidth="700.0">
          <children>
@@ -124,8 +124,8 @@
                   <Font size="15.0" />
                </font>
             </RadioButton>
-            <DatePicker fx:id="hire" layoutX="498.0" layoutY="318.0" />
-            <ComboBox fx:id="joppostion" layoutX="37.0" layoutY="318.0" prefWidth="150.0" />
+            <DatePicker fx:id="hire" layoutX="520.0" layoutY="318.0" prefHeight="25.0" prefWidth="135.0" />
+            <ComboBox fx:id="joppostion" layoutX="37.0" layoutY="318.0" prefWidth="150.0" styleClass="textemployee" stylesheets="@css/project.css" />
             <Label layoutX="536.0" layoutY="103.0" prefHeight="17.0" prefWidth="98.0" text="    Salary" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="20.0" />
