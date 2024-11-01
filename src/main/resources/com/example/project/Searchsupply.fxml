@@ -56,12 +56,17 @@
                </font>
             </Label>
             <JFXTextField fx:id="suppid" layoutX="387.0" layoutY="365.0" prefHeight="27.0" prefWidth="143.0" styleClass="textadopter" stylesheets="@css/project.css" />
-            <JFXButton fx:id="searchbtn" layoutX="553.0" layoutY="361.0" onAction="#searchsupply" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Search " textFill="LINEN">
+            <JFXButton fx:id="searchbtn" layoutX="553.0" layoutY="323.0" onAction="#searchsupply" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Search " textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </JFXButton>
             <JFXButton layoutX="553.0" layoutY="403.0" onAction="#deletesupply" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Delete" textFill="LINEN">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="searchbtn1" layoutX="553.0" layoutY="361.0" onAction="#initialize" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="View" textFill="LINEN">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>

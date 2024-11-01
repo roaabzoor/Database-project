@@ -66,7 +66,7 @@
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="497.0" layoutY="318.0" onAction="#goTomenu" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Cancel" textFill="LINEN">
+      <JFXButton layoutX="565.0" layoutY="316.0" onAction="#goTomenu" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="Cancel" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
@@ -76,5 +76,10 @@
             <Image url="@image/searcmed.png" />
          </image>
       </ImageView>
+      <JFXButton layoutX="430.0" layoutY="316.0" onAction="#initialize" prefHeight="33.0" prefWidth="115.0" styleClass="LOGIN" stylesheets="@css/project.css" text="View All" textFill="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

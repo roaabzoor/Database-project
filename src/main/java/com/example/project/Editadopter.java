@@ -101,6 +101,8 @@ public class Editadopter {
             e.printStackTrace();
         }
     }
+
+
     public void searchadopter() throws IOException, SQLException {
 
         adoptertable.getItems().clear();

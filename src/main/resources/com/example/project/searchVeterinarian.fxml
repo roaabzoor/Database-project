@@ -11,68 +11,53 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="Searchveterinarian" prefHeight="450.0" prefWidth="609.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.SearchVeterinarian">
+<AnchorPane fx:id="Searchveterinarian" prefHeight="450.0" prefWidth="609.0" styleClass="panemenu" stylesheets="@css/project.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.SearchVeterinarian">
    <children>
-      <TableView layoutX="75.0" layoutY="210.0" prefHeight="212.0" prefWidth="544.0">
+      <TableView fx:id="vettable" layoutX="14.0" layoutY="213.0" prefHeight="224.0" prefWidth="582.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="idcolumn" prefWidth="91.19997882843018" text="VeterinarianID" />
+          <TableColumn fx:id="fnamecolumn" prefWidth="71.20001220703125" text="firstName" />
+            <TableColumn fx:id="lnamecolumn" prefWidth="79.20002746582031" text="LastName" />
+            <TableColumn fx:id="addresscolumn" prefWidth="63.20001220703125" text="Address" />
+            <TableColumn fx:id="salarycolumn" prefWidth="61.5999755859375" text="Salary" />
+            <TableColumn fx:id="phonecolmun" prefWidth="63.199951171875" text="Phone" />
+            <TableColumn fx:id="speccolumn" prefWidth="85.60000610351562" text="Specilization" />
+            <TableColumn fx:id="emailcolumn" prefWidth="101.5999755859375" text="email" />
         </columns>
       </TableView>
-      <Label layoutX="192.0" layoutY="14.0" prefHeight="27.0" prefWidth="316.0" text="    Search &amp; View Veterinarian" textFill="#391c00">
+      <Label layoutX="185.0" layoutY="14.0" prefHeight="34.0" prefWidth="329.0" text="    Search &amp; View Veterinarian" textFill="#391c00">
          <font>
             <Font name="David Bold" size="23.0" />
          </font>
       </Label>
-      <Button layoutX="202.0" layoutY="72.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="135.0" styleClass="home" text="Search By :" textFill="LINEN">
+      <Button layoutX="199.0" layoutY="69.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0" styleClass="home" text="Search By :" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="15.0" />
          </font>
       </Button>
-      <JFXTextField layoutX="350.0" layoutY="73.0" styleClass="textadopter" />
+      <JFXTextField fx:id="nametext" layoutX="338.0" layoutY="141.0" styleClass="textadopter" />
       <ImageView fitHeight="187.0" fitWidth="190.0" layoutX="7.0" layoutY="21.0">
          <image>
             <Image url="@image/dddd.png" />
          </image>
       </ImageView>
-      <Button layoutX="350.0" layoutY="112.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="135.0" styleClass="home" text="ID" textFill="LINEN">
-         <font>
-            <Font name="Times New Roman Bold" size="15.0" />
-         </font>
-      </Button>
-      <Button layoutX="350.0" layoutY="145.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="135.0" styleClass="home" text="Name" textFill="LINEN">
-         <font>
-            <Font name="Times New Roman Bold" size="15.0" />
-         </font>
-      </Button>
-      <Button layoutX="202.0" layoutY="112.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="135.0" styleClass="home" text="Phone Number" textFill="LINEN">
-         <font>
-            <Font name="Times New Roman Bold" size="15.0" />
-         </font>
-      </Button>
-      <Button layoutX="202.0" layoutY="145.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="135.0" styleClass="home" text="Pet ID" textFill="LINEN">
-         <font>
-            <Font name="Times New Roman Bold" size="15.0" />
-         </font>
-      </Button>
-      <Button layoutX="6.0" layoutY="410.0" mnemonicParsing="false" onAction="#goTomenu" prefHeight="25.0" prefWidth="66.0" styleClass="home" text="Menu" textFill="LINEN">
+      <Button layoutX="608.0" layoutY="337.0" mnemonicParsing="false" onAction="#goTomenu" prefHeight="32.0" prefWidth="72.0" styleClass="home" text="Menu" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="619.0" layoutY="410.0" mnemonicParsing="false" onAction="#goToLogin1" prefHeight="32.0" prefWidth="72.0" styleClass="home" text="Back" textFill="LINEN">
+      <Button layoutX="608.0" layoutY="378.0" mnemonicParsing="false" onAction="#goToLogin1" prefHeight="32.0" prefWidth="72.0" styleClass="home" text="Back" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="17.0" />
          </font>
       </Button>
-      <Line endX="139.0" layoutX="350.0" layoutY="41.0" startX="-142.0" stroke="#512703" />
-      <Button layoutX="204.0" layoutY="178.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="135.0" styleClass="home" text="View All" textFill="LINEN">
+      <Line endX="128.4000244140625" layoutX="350.0" layoutY="41.0" startX="-142.0" stroke="#512703" />
+      <Button layoutX="377.0" layoutY="180.0" mnemonicParsing="false" onAction="#searchveterinarian" prefHeight="28.0" prefWidth="101.0" styleClass="home" text="Search" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="15.0" />
          </font>
       </Button>
-      <Button layoutX="349.0" layoutY="178.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="135.0" styleClass="home" text="Delete" textFill="LINEN">
+      <Button layoutX="608.0" layoutY="293.0" mnemonicParsing="false" onAction="#deleteveterinarian" prefHeight="32.0" prefWidth="72.0" styleClass="home" text="Delete" textFill="LINEN">
          <font>
             <Font name="Times New Roman Bold" size="15.0" />
          </font>
@@ -82,5 +67,21 @@
             <Image url="@image/docccc.png" />
          </image>
       </ImageView>
+      <Label layoutX="202.0" layoutY="136.0" prefHeight="35.0" prefWidth="109.0" text="First Name:" textFill="#391c00">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="203.0" layoutY="97.0" prefHeight="44.0" prefWidth="135.0" text="Veterinarian ID :" textFill="#391c00">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="vettext" layoutX="338.0" layoutY="106.0" styleClass="textadopter" />
+      <Button layoutX="608.0" layoutY="254.0" mnemonicParsing="false" onAction="#initialize" prefHeight="32.0" prefWidth="72.0" styleClass="home" text="View " textFill="LINEN">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
