@@ -13,6 +13,8 @@ module com.example.project {
     requires com.jfoenix;
     requires java.desktop;
     requires java.sql;
+    requires jasperreports;
+    requires java.mail;
 
 
     opens com.example.project to javafx.fxml;

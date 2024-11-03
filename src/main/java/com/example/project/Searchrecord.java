@@ -12,8 +12,14 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.design.JasperDesign;
+import net.sf.jasperreports.engine.xml.JRXmlLoader;
+import net.sf.jasperreports.swing.JRViewer;
 
-import java.io.IOException;
+
+import javax.swing.*;
+import java.io.*;
 import java.sql.*;
 import java.util.Optional;
 
@@ -59,6 +65,31 @@ public class Searchrecord {
         database b = new database();
         return DriverManager.getConnection(b.url, b.user, b.password);
     }
+
+    public void showreports() throws IOException, SQLException,JRException{
+        try (Connection conn = connect();
+             InputStream inp = new FileInputStream(new File("record - Copy.jrxml"))){
+
+             JasperDesign jd = JRXmlLoader.load(inp);
+             JasperReport jr = JasperCompileManager.compileReport(jd);
+             JasperPrint jp = JasperFillManager.fillReport(jr, null, conn);
+
+             JFrame frame = new JFrame("Report");
+             frame.getContentPane().add(new JRViewer(jp));
+             frame.setSize(600, 600);
+             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+             frame.setVisible(true);
+            conn.close();
+            inp.close();
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Database error: " + e.getMessage());
+        } catch (JRException e) {
+            JOptionPane.showMessageDialog(null, "Report generation error: " + e.getMessage());
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "File error: " + e.getMessage());
+        }
+    }
+
 
     @FXML
     public void initialize() {
@@ -173,7 +204,7 @@ public class Searchrecord {
         Record selectedrecord = recordtable.getSelectionModel().getSelectedItem();
 
         if (selectedrecord == null) {
-            System.out.println("No adopter selected.");
+            JOptionPane.showMessageDialog(null, "No record selected.", "Alert", JOptionPane.WARNING_MESSAGE);
             return;
         }
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION,
